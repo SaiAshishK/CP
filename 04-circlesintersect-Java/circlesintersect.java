@@ -6,6 +6,10 @@
 
 class circlesintersect {
 	public boolean fun_circlesintersect(int x1, int y1, int r1, int x2, int y2, int r2){
-		return false;
+		int x = (x1-x2)*(x1-x2);
+		int y = (y1-y2)*(y1-y2);
+		int z = (int)Math.sqrt(x+y);
+		
+		return !(z>r1+r2);
 	}
 }
