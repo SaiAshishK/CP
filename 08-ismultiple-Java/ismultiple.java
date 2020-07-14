@@ -7,6 +7,13 @@
 class ismultiple {
 	public boolean fun_ismultiple(int m, int n){
 		// your code goes here
-		return false;
+		if(n == 0 && m ==0){
+			return true;
+		}
+		else if(n == 0){
+			return false;
+		}
+		else{return m%n==0;}
+		
 	}
 }
