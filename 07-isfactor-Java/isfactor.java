@@ -6,6 +6,12 @@
 class isfactor {
 	public boolean fun_isfactor(int f, int n){
 		// your code goes here
-		return false;
+		if(n == 0 && f == 0){
+			return true;
+		}
+		else if (f == 0){
+			return false;
+		}
+		else{return n%f==0;}
 	}
 }
