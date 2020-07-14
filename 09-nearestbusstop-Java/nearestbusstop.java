@@ -8,6 +8,16 @@
 class nearestbusstop {
 	public int fun_nearestbusstop(int street){
 		// your code goes here
-		return -1;
+		int res = street/8;
+		res = res*8;
+		int res2 = res+8;
+		if(street%8>4){
+			return res2;
+		}
+		else{
+			return res;
+		}
+
+		// return -1;
 	}
 }
