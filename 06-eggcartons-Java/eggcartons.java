@@ -5,6 +5,10 @@
 
 class eggcartons {
 	public int fun_eggcartons(int eggs){
-		return 0;
+		int c = 0;
+		for(int i = 0 ; i < eggs; i = i +12){
+			c++;
+		}
+		return c;
 	}
 }
