@@ -4,7 +4,7 @@ class recursion {
 	int p3 = 0;
 	public int get_fib(int value){
 		
-		if(value == 1){
+		if(value > 0){
 			p3 = p1 + p2;
 			p1 = p2;
 			p2 = p3;
