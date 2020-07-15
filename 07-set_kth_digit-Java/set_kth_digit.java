@@ -6,7 +6,7 @@
 
  
 class set_kth_digit {
-	public int fun_set_kth_digit(int n, int k, int d){
+	public static int fun_set_kth_digit(int n, int k, int d){
 		// your code goes here
 		
 		String[] s = Integer.toString(n).split("");
@@ -21,5 +21,8 @@ class set_kth_digit {
 		}
 
 			return res;
+	}
+	public static void main(String[] args) {
+		System.out.println(fun_set_kth_digit(468, 0, 1));
 	}
 }
