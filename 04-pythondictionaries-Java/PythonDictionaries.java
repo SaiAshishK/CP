@@ -29,21 +29,26 @@
 // Asian City - Country
 // Asian City - Country
 import java.util.*;
+
 public class PythonDictionaries {
+	List<String> location;
 
 	public PythonDictionaries() {
 		// Your code goes here
-		
+		List<String> location;
+
 	}
+
 	public List<String> alphaUSA() {
 		// Your code goes here
 
-		return null;
+		return location;
 	}
 
 	public List<String> sortAsia() {
 		// Your code goes here
-		return null;
+		Collections.sort(location);
+		return location;
 	}
 	
 }
