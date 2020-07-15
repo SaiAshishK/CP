@@ -41,6 +41,15 @@ public class PlayStep2 {
 			p[2-i] = re;
 		}
 		System.out.println(Arrays.toString(p));
+		if(p[0] == p[1]|| p[1] == p[2]||p[0] == p[2]){
+			p[0] = 0;
+		}
+		else{
+			p[1] = 0;
+			p[2] = 0;
+		}
+		
+
 
 		return new int[0];		
 	}
