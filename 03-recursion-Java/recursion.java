@@ -13,8 +13,8 @@ class recursion {
 
 	    return p3; 
 	}
-	public static void main(String[] args) {
-		recursion obj = new recursion();
-		System.out.println(obj.get_fib(8));
-	}
+	// public static void main(String[] args) {
+	// 	recursion obj = new recursion();
+	// 	System.out.println(obj.get_fib(8));
+	// }
 }
