@@ -16,6 +16,7 @@ class set_kth_digit {
 		}
 		String[] s1 = Integer.toString(n).split("");
 		String[] s = new String[s1.length+1];
+		s[0] = Integer.toString(0);
 		int t = 1;
 		for(String qq : s1){
 			s[t++] = qq;
