@@ -8,6 +8,31 @@
 class pascaltrianglevalue {
 	public int fun_pascaltrianglevalue(int row, int col){
 		// your code goes here
-		return 1;	
+		if(row == 0 || col == 0){
+			return 1;
+		}
+		else if(col > row+1){
+			return 0;
+		}
+		else{
+			return combi(row,col);
+		}
+		
+	}
+	public int combi(int n,int r){
+		int p1 = factorial(n);
+		int p2 = factorial(r);
+		int p3 = factorial(n-r);
+
+		return p1/(p2 * p3);
+	}
+
+	public int factorial(int q){
+		int r = 1;
+		while(q!=1){
+			r = r * q;
+			q--;
+		}
+		return r;
 	}
 }
