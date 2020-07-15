@@ -19,9 +19,6 @@ public class Queue{
 
 	public int dequeue(){
 		int p = storage[front++]; 
-		// for(int i = front ; i < rear ; i++){
-		// 	storage[i] = storage[i+1];
-		// }
 		return p;
 	}
 }
