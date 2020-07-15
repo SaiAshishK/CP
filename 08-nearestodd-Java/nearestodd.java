@@ -14,8 +14,8 @@ class nearestodd {
 		else{
 			int n2 = n1+1;//15
 			int n3 = n1-1;//13
-			if(n2-n > n-n1){
-				return n1;
+			if(n2-n > n-n3){
+				return n3;
 			}
 			else{
 				return n2;
