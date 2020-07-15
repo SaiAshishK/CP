@@ -9,14 +9,22 @@ public class Queue{
 	}
 	
 	public void enqueue(int new_ele){
-
+		if(front == rear){
+			storage[rear] = new_ele;
+			rear++;
+		}
+		else{
+			storage[rear++] = new_ele;
+		}
 	}
 
 	public int peek(){
-		return 0;
+		
+		return storage[rear];
 	}
 
 	public int dequeue(){
-		return 0;
+		int p = storage[rear--]; 
+		return p;
 	}
 }
