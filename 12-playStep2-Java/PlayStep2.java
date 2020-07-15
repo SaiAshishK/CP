@@ -75,7 +75,7 @@ public class PlayStep2 {
 		int[] res2 = new int[3];
 		int y = 0;
 		for(int k= 0 ; k < 3 ; k++){
-			res2[2-k] = p[k];
+			p[2-k] = res2[k];
 		}
 
 		return p;		
