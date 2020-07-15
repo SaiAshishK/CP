@@ -27,10 +27,24 @@
 // Hint: Then, you may wish to use diceToOrderedHand(a, b, c) at the end to convert the 3 dice back
 // into a sorted hand.
 // Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
+import java.util.Arrays;
 
 public class PlayStep2 {
-	public int[] playStep2(int hand, int dice) {
+	public static int[] playStep2(int hand, int dice) {
 		// Your code goes here
+		int[]res = new int[2];
+		int[] p = new int[3];
+		for(int i = 0; i < 3 ; i++){
+			int re = hand%10;
+			hand = hand - re;
+			hand =hand / 10;
+			res[3-i] = re;
+		}
+		System.out.println(Arrays.toString(res));
+
 		return new int[0];		
+	}
+	public static void main(String[] args) {
+		System.out.println(playStep2(413,2345));
 	}
 }
