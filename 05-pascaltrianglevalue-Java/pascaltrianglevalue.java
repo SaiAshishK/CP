@@ -6,7 +6,7 @@
 // # are not legal values, return None, instead of crashing. 
 
 class pascaltrianglevalue {
-	public static int fun_pascaltrianglevalue(int row, int col){
+	public int fun_pascaltrianglevalue(int row, int col){
 		// your code goes here
 		if(row == 0 || col == 0 || row==1){
 			return 1;
@@ -19,7 +19,7 @@ class pascaltrianglevalue {
 		}
 		
 	}
-	public static int combi(int n,int r){
+	public int combi(int n,int r){
 		int p1 = factorial(n);
 		int p2 = factorial(r);
 		int p3 = factorial(n-r);
@@ -27,7 +27,7 @@ class pascaltrianglevalue {
 		return p1/(p2 * p3);
 	}
 
-	public static int factorial(int q){
+	public int factorial(int q){
 		int r = 1;
 		while(q!=1){
 			r = r * q;
@@ -35,7 +35,5 @@ class pascaltrianglevalue {
 		}
 		return r;
 	}
-	public static void main(String[] args) {
-		System.out.println(fun_pascaltrianglevalue(1,1));
-	}
+	
 }
