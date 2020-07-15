@@ -57,21 +57,18 @@ public class PlayStep2 {
 		String d[] = Integer.toString(dice).split("");
 		String s = Integer.toString(dice);
 
-		for(int j = 0 ; j < d.length/2 ; j++){
+		if(flag == true){
 			s = s.substring(0, s.length() - 1);
-			
-			if(flag == true){
-				p[0] = Integer.parseInt(d[d.length-1]);
-				flag2 = true;
-				break;
-			}
-		
-			else{
+			p[0] = Integer.parseInt(d[d.length-1]);
+		}
+		else{
+			for(int j = 0 ; j < d.length/2 ; j++){
+				s = s.substring(0, s.length() - 1);
 				p[j+1] = Integer.parseInt(d[3-j]);
 			}
-		
-		
+
 		}
+		
 		Arrays.sort(p);
 		// System.out.println(Arrays.toString(p));
 		int[] res2 = new int[3];
