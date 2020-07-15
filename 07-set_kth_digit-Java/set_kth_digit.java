@@ -20,6 +20,7 @@ class set_kth_digit {
 		int res = 0;
 		for(int j = 0 ; j < s.length ; j++){
 			int r = Integer.parseInt(s[j]);
+			System.out.println(r);
 			res = res + r*10;
 		}
 
