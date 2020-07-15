@@ -29,6 +29,8 @@
 // Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 import java.util.Arrays;
 
+import sun.font.TrueTypeGlyphMapper;
+
 public class PlayStep2 {
 	public static int[] playStep2(int hand, int dice) {
 		// Your code goes here
@@ -41,17 +43,37 @@ public class PlayStep2 {
 			p[2-i] = re;
 		}
 		System.out.println(Arrays.toString(p));
+		boolean flag = false;
 		if(p[0] == p[1]|| p[1] == p[2]||p[0] == p[2]){
+			flag = true;
 			p[0] = 0;
-		}
+			
+
+ 		}
 		else{
 			p[1] = 0;
 			p[2] = 0;
 		}
+		boolean flag2 = false;
+		String d[] = Integer.toString(dice).split("");
+		for(int j = 0 ; j < d.length/2 ; j++){
+			if(flag == true){
+				p[0] = Integer.parseInt(d[3]);
+				flag2 = true;
+				break;
+			}
+			else{
+				p[j+1] = Integer.parseInt(d[3-j]);
+			}
+			if(flag2 == true){
+				break;
+			}
 		
+		}
+		Arrays.sort(p);
 
 
-		return new int[0];		
+		return p;		
 	}
 	public static void main(String[] args) {
 		System.out.println(playStep2(413,2345));
