@@ -22,12 +22,12 @@ class set_kth_digit {
 			int r = Integer.parseInt(s[j]);
 			// System.out.println(r);
 			res = r + res*10;
-			System.out.println(res);
+			// System.out.println(res);
 		}
 
 			return res;
 	}
 	public static void main(String[] args) {
-		System.out.println(fun_set_kth_digit(468, 0, 1));
+		System.out.println(fun_set_kth_digit(-468, 0, 1));
 	}
 }
