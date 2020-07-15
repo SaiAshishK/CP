@@ -80,6 +80,6 @@ public class PlayStep2 {
 		return res2;		
 	}
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString(playStep2(544,23)));
+		System.out.println(Arrays.toString(playStep2(544,456)));
 	}
 }
