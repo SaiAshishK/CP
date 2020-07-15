@@ -2,12 +2,13 @@
 // Write the function trianglearea(s1, s2, s3) that takes 3 floats/ints and returns the area of the
 // triangle that has those lengths of its side. If no such triangle exists, return 0. Hint: you
 // will probably wish to use Heron's Formula.
-
+import java.lang.Math;
 
 public class TriangleArea {
 	public int triangleArea(double s1, double s2, double s3) {
 		// Your code goes here
 		int area = ((int)s1 + (int)s2 +  (int)s3)/2;
-		return area;
+		int res = (int)Math.sqrt(area * (area - (int)s1) * (area - (int)s2) * (area - (int)s3));
+		return res;
 	}
 }
