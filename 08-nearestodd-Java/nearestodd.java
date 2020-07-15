@@ -23,7 +23,7 @@ class nearestodd {
 		}
 	}
 	public static void main(String[] args) {
-		System.out.println(fun_nearestodd(14.2));
+		System.out.println(fun_nearestodd(12.0));
 	}
 }
 
