@@ -7,8 +7,8 @@ import java.lang.Math;
 public class TriangleArea {
 	public static int triangleArea(double s1, double s2, double s3) {
 		// Your code goes here
-		int area = ((int)s1 + (int)s2 +  (int)s3)/2;
-		int res = (int)Math.sqrt(area * (area - (int)s1) * (area - (int)s2) * (area - (int)s3));
+		double area = (s1 + s2 +  s3)/2;
+		int res = (int)Math.sqrt(area * (area - s1) * (area - s2) * (area - s3));
 		return res;
 	}
 	public static void main(String[] args) {
