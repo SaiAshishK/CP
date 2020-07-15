@@ -57,6 +57,7 @@ public class PlayStep2 {
 		boolean flag2 = false;
 		String d[] = Integer.toString(dice).split("");
 		for(int j = 0 ; j < d.length/2 ; j++){
+			while(flag2!=true){
 			if(flag == true){
 				p[0] = Integer.parseInt(d[3]);
 				flag2 = true;
@@ -65,9 +66,7 @@ public class PlayStep2 {
 			else{
 				p[j+1] = Integer.parseInt(d[3-j]);
 			}
-			if(flag2 == true){
-				break;
-			}
+		}
 		
 		}
 		Arrays.sort(p);
