@@ -10,6 +10,6 @@
 public class NumberOfPoolBalls {
 	public long numberOfPoolBalls(int n) {
 		// Your code goes here
-		return 0;
+		return ((n*(n+1))/2);
 	}
 }
