@@ -41,7 +41,7 @@ public class PlayStep2 {
 			hand =hand / 10;
 			p[2-i] = re;
 		}
-		System.out.println(Arrays.toString(p));
+		// System.out.println(Arrays.toString(p));
 		boolean flag = false;
 		if(p[0] == p[1]|| p[1] == p[2]||p[0] == p[2]){
 			flag = true;
@@ -69,11 +69,12 @@ public class PlayStep2 {
 		
 		}
 		Arrays.sort(p);
-		System.out.println(Arrays.toString(p));
+		// System.out.println(Arrays.toString(p));
 		int[] res2 = new int[3];
 		for(int k= 0 ; k < 3 ; k++){
 			 res2[k] = p[2-k];
 		}
+
 
 		return res2;		
 	}
