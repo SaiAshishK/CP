@@ -55,7 +55,10 @@ public class PlayStep2 {
 		}
 		boolean flag2 = false;
 		String d[] = Integer.toString(dice).split("");
+		String s = Integer.toString(dice);
+
 		for(int j = 0 ; j < d.length/2 ; j++){
+			s = s.substring(0, s.length() - 1);
 			while(flag2!=true){
 			if(flag == true){
 				p[0] = Integer.parseInt(d[d.length-1]);
@@ -75,7 +78,7 @@ public class PlayStep2 {
 			 res2[k] = p[2-k];
 		}
 
-
+		System.out.println(s);
 		return res2;		
 	}
 	public static void main(String[] args) {
