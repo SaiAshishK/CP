@@ -1,5 +1,5 @@
 class recursion {
-	int p1 = 0;
+	int p1 = 1;
 	int p2 = 1;
 	int p3 = 0;
 	public int get_fib(int value){
