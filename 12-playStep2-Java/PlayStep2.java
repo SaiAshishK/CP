@@ -76,7 +76,7 @@ public class PlayStep2 {
 			 res2[k] = p[2-k];
 		}
 		int qw1 = 0;
-		for(int gh : p){
+		for(int gh : res2){
 			qw1 = qw1*10 + gh;
 		}
 		int qw2 = Integer.parseInt(s);
