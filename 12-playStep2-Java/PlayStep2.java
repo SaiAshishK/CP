@@ -29,7 +29,6 @@
 // Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 import java.util.Arrays;
 
-import sun.font.TrueTypeGlyphMapper;
 
 public class PlayStep2 {
 	public static int[] playStep2(int hand, int dice) {
