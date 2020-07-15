@@ -5,13 +5,16 @@
 import java.lang.Math;
 
 class nearestodd {
-	public int fun_nearestodd(double n){
+	public static int fun_nearestodd(double n){
 		// your code goes here
 		int n1 = (int)Math.round(n);
 		if(!(n1%2 == 0)){
 			return n1;
 		}
 		return n1-1;
+	}
+	public static void main(String[] args) {
+		System.out.println(fun_nearestodd(12.2));
 	}
 }
 
