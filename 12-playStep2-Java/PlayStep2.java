@@ -71,6 +71,7 @@ public class PlayStep2 {
 		
 		}
 		Arrays.sort(p);
+		System.out.println(Arrays.toString(p));
 		int[] res2 = new int[3];
 		int y = 0;
 		for(int k= 0 ; k < 3 ; k++){
