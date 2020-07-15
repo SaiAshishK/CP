@@ -75,9 +75,14 @@ public class PlayStep2 {
 		for(int k= 0 ; k < 3 ; k++){
 			 res2[k] = p[2-k];
 		}
-
+		int qw1 = 0;
+		for(int gh : p){
+			qw1 = qw1*10 + gh;
+		}
+		int qw2 = Integer.parseInt(s);
+		int[] qw123 = {qw1,qw2};
 		System.out.println(s);
-		return res2;		
+		return qw123;		
 	}
 	public static void main(String[] args) {
 		System.out.println(Arrays.toString(playStep2(413,2312)));
