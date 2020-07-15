@@ -12,6 +12,6 @@ public class TriangleArea {
 		return res;
 	}
 	public static void main(String[] args) {
-		System.out.println(triangleArea(10.0,10.0,10.0));
+		System.out.println(triangleArea(10.0,10.5,10.0));
 	}
 }
