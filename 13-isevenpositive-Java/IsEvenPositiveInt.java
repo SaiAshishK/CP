@@ -7,6 +7,10 @@
 public class IsEvenPositiveInt {
 	public boolean isEvenPositiveInt(int x) {
 		// Your code goes here
+		return x>0 && x%2==0;
+	}
+	public boolean isEvenPositiveInt(String x) {
+		// Your code goes here
 		return false;
 	}
 }
