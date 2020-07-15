@@ -21,7 +21,7 @@ class set_kth_digit {
 			s[t++] = qq;
 		}
 		
-		System.out.println(Arrays.toString(s));
+		// System.out.println(Arrays.toString(s));
 		// String[] p = new String[s.length];
 		s[s.length - k - 1] = Integer.toString(d);
 		// System.out.println(Arrays.toString(s));
