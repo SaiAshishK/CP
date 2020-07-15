@@ -12,7 +12,7 @@ class set_kth_digit {
 		
 		String[] s = Integer.toString(n).split("");
 		System.out.println(Arrays.toString(s));
-		String[] p = new String[s.length];
+		// String[] p = new String[s.length];
 		s[s.length - k - 1] = Integer.toString(d);
 		System.out.println(Arrays.toString(s));
 
@@ -20,8 +20,9 @@ class set_kth_digit {
 		int res = 0;
 		for(int j = 0 ; j < s.length ; j++){
 			int r = Integer.parseInt(s[j]);
-			System.out.println(r);
+			// System.out.println(r);
 			res = res + r*10;
+			System.out.println(res);
 		}
 
 			return res;
