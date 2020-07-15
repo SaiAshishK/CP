@@ -3,6 +3,7 @@
 // # single digit (between 0 and 9 inclusive). This function returns the number n with 
 // # the kth digit replaced with d. Counting starts at 0 and goes right-to-left, 
 // # so the 0th digit is the rightmost digit. 
+import java.util.Arrays;
 
  
 class set_kth_digit {
@@ -10,6 +11,7 @@ class set_kth_digit {
 		// your code goes here
 		
 		String[] s = Integer.toString(n).split("");
+		System.out.println(Arrays.toString(s));
 		String[] p = new String[s.length];
 		s[s.length - k - 1] = Integer.toString(d);
 
