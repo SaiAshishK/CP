@@ -8,7 +8,7 @@ public class TriangleArea {
 	public static int triangleArea(double s1, double s2, double s3) {
 		// Your code goes here
 		double area = (s1 + s2 + s3)/2;
-		double res = (Math.sqrt(area * (area - s1) * (area - s2) * (area - s3)));
+		int res = (int)Math.round(Math.sqrt(area * (area - s1) * (area - s2) * (area - s3)));
 		System.out.println(res);
 		return 1;
 	}
