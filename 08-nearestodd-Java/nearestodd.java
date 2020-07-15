@@ -11,7 +11,16 @@ class nearestodd {
 		if(!(n1%2 == 0)){
 			return n1;
 		}
-		return n1-1;
+		else{
+			int n2 = n1+1;//15
+			int n3 = n1-1;//13
+			if(n2-n > n-n1){
+				return n1;
+			}
+			else{
+				return n2;
+			}
+		}
 	}
 	public static void main(String[] args) {
 		System.out.println(fun_nearestodd(14.2));
