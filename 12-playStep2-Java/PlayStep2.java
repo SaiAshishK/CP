@@ -59,7 +59,7 @@ public class PlayStep2 {
 		for(int j = 0 ; j < d.length/2 ; j++){
 			while(flag2!=true){
 			if(flag == true){
-				p[0] = Integer.parseInt(d[3]);
+				p[0] = Integer.parseInt(d[d.length-1]);
 				flag2 = true;
 				break;
 			}
