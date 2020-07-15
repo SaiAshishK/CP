@@ -15,6 +15,6 @@ class recursion {
 	}
 	public static void main(String[] args) {
 		recursion obj = new recursion();
-		System.out.println(obj.get_fib(2));
+		System.out.println(obj.get_fib(1));
 	}
 }
