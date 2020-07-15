@@ -9,8 +9,8 @@ public class TriangleArea {
 		// Your code goes here
 		double area = (s1 + s2 + s3)/2;
 		int res = (int)Math.round(Math.sqrt(area * (area - s1) * (area - s2) * (area - s3)));
-		System.out.println(res);
-		return 1;
+		// System.out.println(res);
+		return res;
 	}
 	public static void main(String[] args) {
 		System.out.println(triangleArea(10.0,10.5,10.0));
