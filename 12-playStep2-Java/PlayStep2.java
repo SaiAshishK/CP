@@ -34,7 +34,6 @@ import java.util.Arrays;
 public class PlayStep2 {
 	public static int[] playStep2(int hand, int dice) {
 		// Your code goes here
-		int[]res = new int[2];
 		int[] p = new int[3];
 		for(int i = 0; i < 3 ; i++){
 			int re = hand%10;
@@ -72,14 +71,13 @@ public class PlayStep2 {
 		Arrays.sort(p);
 		System.out.println(Arrays.toString(p));
 		int[] res2 = new int[3];
-		int y = 0;
 		for(int k= 0 ; k < 3 ; k++){
 			 res2[k] = p[2-k];
 		}
 
 		return res2;		
 	}
-	public static void main(String[] args) {
-		System.out.println(Arrays.toString(playStep2(544,456)));
-	}
+	// public static void main(String[] args) {
+	// 	System.out.println(Arrays.toString(playStep2(544,456)));
+	// }
 }
