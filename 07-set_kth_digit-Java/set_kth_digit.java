@@ -21,7 +21,7 @@ class set_kth_digit {
 		for(int j = 0 ; j < s.length ; j++){
 			int r = Integer.parseInt(s[j]);
 			// System.out.println(r);
-			res = res + r*10;
+			res = r + res*10;
 			System.out.println(res);
 		}
 
