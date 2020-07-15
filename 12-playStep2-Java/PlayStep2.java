@@ -75,6 +75,6 @@ public class PlayStep2 {
 		return p;		
 	}
 	public static void main(String[] args) {
-		System.out.println(playStep2(413,2345));
+		System.out.println(Arrays.toString(playStep2(413,2345)));
 	}
 }
