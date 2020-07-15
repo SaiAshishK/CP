@@ -33,6 +33,6 @@ class set_kth_digit {
 			return res;
 	}
 	public static void main(String[] args) {
-		System.out.println(fun_set_kth_digit(-468, 0, 1));
+		System.out.println(fun_set_kth_digit(-468, 3, 1));
 	}
 }
