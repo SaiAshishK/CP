@@ -9,8 +9,13 @@ import java.util.Arrays;
 class set_kth_digit {
 	public static int fun_set_kth_digit(int n, int k, int d){
 		// your code goes here
-		
+		boolean flag = true;
+		if(n<0){
+			flag = false;
+			n = -n;
+		}
 		String[] s = Integer.toString(n).split("");
+		
 		System.out.println(Arrays.toString(s));
 		// String[] p = new String[s.length];
 		s[s.length - k - 1] = Integer.toString(d);
