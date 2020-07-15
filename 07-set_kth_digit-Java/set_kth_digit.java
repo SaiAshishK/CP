@@ -13,10 +13,10 @@ class set_kth_digit {
 		String[] p = new String[s.length];
 		s[s.length - k - 1] = Integer.toString(d);
 
-		
+
 		int res = 0;
 		for(int j = 0 ; j < s.length ; j++){
-			int r = Integer.parseInt(s[s.length - j -1]);
+			int r = Integer.parseInt(s[j]);
 			res = res + r*10;
 		}
 
