@@ -15,6 +15,15 @@ class set_kth_digit {
 			n = n - t;
 			n = n / 10;
 		}
-			return 0;
+		String[] s = Integer.toString(re).split("");
+		s[k] = Integer.toString(d);
+
+		int res = 0;
+		for(int j = 0 ; j < s.length ; j++){
+			int r = Integer.parseInt(s[s.length - j -1]);
+			res = res + r*10;
+		}
+
+			return res;
 	}
 }
