@@ -24,11 +24,11 @@ public class TestJUnit {
       assertEquals("3.", 168, s.fun_set_kth_digit(468, 2, 1));
     }
 
-   // @Test
-   // public void testCase2() {
-   //    set_kth_digit s = new set_kth_digit();
-   //    assertEquals("1.", 1468, s.fun_set_kth_digit(468, 3, 1));
-   //    assertEquals("2.", -1468, s.fun_set_kth_digit(-468, 3, 1));
-   // }
+   @Test
+   public void testCase2() {
+      set_kth_digit s = new set_kth_digit();
+      assertEquals("1.", 1468, s.fun_set_kth_digit(468, 3, 1));
+      assertEquals("2.", -1468, s.fun_set_kth_digit(-468, 3, 1));
+   }
 }
 
