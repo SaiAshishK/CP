@@ -8,7 +8,7 @@
 class pascaltrianglevalue {
 	public static int fun_pascaltrianglevalue(int row, int col){
 		// your code goes here
-		if(row == 0 || col == 0 || col==1){
+		if(row == 0 || col == 0 || row==1){
 			return 1;
 		}
 		else if(col > row+1){
