@@ -7,6 +7,9 @@
 public class LineIntersection {
 	public int lineIntersection(int m1, int b1, int m2, int b2) {
 		// Your code goes here
-		return 1;
+		int x  = (b2-b1)/(m1-m2);
+		int y = (m1 * x) + b1;
+
+		return x;
 	}
 }
