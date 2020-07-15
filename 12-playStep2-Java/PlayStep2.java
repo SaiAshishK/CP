@@ -73,8 +73,8 @@ public class PlayStep2 {
 		Arrays.sort(p);
 		int[] res2 = new int[3];
 		int y = 0;
-		for(int k : p){
-			res2[y++] = k;
+		for(int k= 0 ; k < 3 ; k++){
+			res2[3-k+1] = k;
 		}
 
 		return p;		
