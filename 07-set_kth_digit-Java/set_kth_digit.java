@@ -8,6 +8,13 @@
 class set_kth_digit {
 	public int fun_set_kth_digit(int n, int k, int d){
 		// your code goes here
+		int re = 0;
+		while(n!=1){
+			int t = n%10;
+			re = re + t*10;
+			n = n - t;
+			n = n / 10;
+		}
 			return 0;
 	}
 }
