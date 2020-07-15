@@ -10,7 +10,7 @@ public class LineIntersection {
 		if(m1-m2 == 0){return 0;}
 		int x  = (b2-b1)/(m1-m2);
 		
-		int y = (m1 * x) + b1;
+		if(x == 1 || x <0){x= 0;}
 
 		return x;
 	}
