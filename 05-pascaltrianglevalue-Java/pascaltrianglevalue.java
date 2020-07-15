@@ -36,6 +36,6 @@ class pascaltrianglevalue {
 		return r;
 	}
 	public static void main(String[] args) {
-		System.out.println(fun_pascaltrianglevalue(6,2));
+		System.out.println(fun_pascaltrianglevalue(1,1));
 	}
 }
