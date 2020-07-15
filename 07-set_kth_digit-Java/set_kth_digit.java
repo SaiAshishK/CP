@@ -14,7 +14,12 @@ class set_kth_digit {
 			flag = false;
 			n = -n;
 		}
-		String[] s = Integer.toString(n).split("");
+		String[] s1 = Integer.toString(n).split("");
+		String[] s = new String[s1.length+1];
+		int t = 1;
+		for(String qq : s1){
+			s[t++] = qq;
+		}
 		
 		System.out.println(Arrays.toString(s));
 		// String[] p = new String[s.length];
