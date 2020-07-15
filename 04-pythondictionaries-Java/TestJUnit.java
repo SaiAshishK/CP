@@ -22,11 +22,11 @@ public class TestJUnit {
 		assertEquals(new PythonDictionaries().alphaUSA(), location);
    }
 
-//    @Test
-//    public void testCase2() {
-//    		List<String> location = new ArrayList<String>();
-//    		location.add("Atlanta");
-//    		location.add("Mountain View");
-// 		assertEquals(new PythonDictionaries().sortAsia(), location);
-//    }
+   @Test
+   public void testCase2() {
+   		List<String> location = new ArrayList<String>();
+   		location.add("Atlanta");
+   		location.add("Mountain View");
+		assertEquals(new PythonDictionaries().sortAsia(), location);
+   }
 }
