@@ -7,6 +7,7 @@
 public class TriangleArea {
 	public int triangleArea(double s1, double s2, double s3) {
 		// Your code goes here
-		return 216;
+		int area = ((int)s1 + (int)s2 +  (int)s3)/2;
+		return area;
 	}
 }
