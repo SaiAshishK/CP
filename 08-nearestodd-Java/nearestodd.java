@@ -7,7 +7,7 @@ class nearestodd {
 	public int fun_nearestodd(double n){
 		// your code goes here
 		int n1 = (int)n;
-		if(n1%2 == 0){
+		if(!(n1%2 == 0)){
 			return n1;
 		}
 		return n1-1;
