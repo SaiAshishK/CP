@@ -38,7 +38,7 @@ public class PlayStep2 {
 			int re = hand%10;
 			hand = hand - re;
 			hand =hand / 10;
-			p[3-i] = re;
+			p[2-i] = re;
 		}
 		System.out.println(Arrays.toString(p));
 
