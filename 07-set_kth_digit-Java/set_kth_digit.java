@@ -34,6 +34,9 @@ class set_kth_digit {
 			res = r + res*10;
 			// System.out.println(res);
 		}
+		if(flag == false){
+			res = -res;
+		}
 
 			return res;
 	}
