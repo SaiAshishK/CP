@@ -35,7 +35,6 @@ public class PythonDictionaries {
 
 	public PythonDictionaries() {
 		// Your code goes here
-		List<String> location;
 
 	}
 
