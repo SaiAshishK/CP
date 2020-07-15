@@ -14,7 +14,7 @@ class nearestodd {
 		return n1-1;
 	}
 	public static void main(String[] args) {
-		System.out.println(fun_nearestodd(12.0));
+		System.out.println(fun_nearestodd(14.2));
 	}
 }
 
