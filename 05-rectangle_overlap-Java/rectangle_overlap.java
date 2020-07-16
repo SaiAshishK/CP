@@ -12,9 +12,9 @@ import java.lang.Math.*;
 class rectangle_overlap {
 	public boolean fun_rectangle_overlap(int left1, int top1, int width1, int height1, int left2, int top2, int width2, int height2){
 		int[] l1 = {top1,left1};
-		int[] r1 = {height1,width1};
+		int[] r1 = {width1,height1};
 		int[] l2 = {top2,left2};
-		int[] r2 = {height2,width2};
+		int[] r2 = {width2,height2};
 		if (l1[0] >= r2[0] || l2[0] >= r1[0]) { 
             return false; 
         } 
