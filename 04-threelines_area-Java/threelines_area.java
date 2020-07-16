@@ -9,7 +9,5 @@ class threelines_area {
 		int area = (int)Math.sqrt(p * (p-a) * (p-b) * (p-c));
 		return area;
 	}
-	public static void main(String[] args) {
-		System.out.println(fun_threelines_area(16, 12, 11));
-	}
+	
 }
