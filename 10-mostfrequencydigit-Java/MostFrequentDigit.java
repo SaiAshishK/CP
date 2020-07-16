@@ -5,6 +5,27 @@
 public class MostFrequentDigit {
 	public int mostFrequentDigit(int n) {
 		// Your code goes here
-		return 1;
+		if(n == 0){
+			return 1;
+		}
+		if(n<=9){
+			return n;
+		}
+		String[] s = Integer.toString(n).split("");
+		int[] count = new int[10];
+		for(String g : s){
+			int q = Integer.parseInt(g);
+			count[q]++;
+		}
+		int max = 0;
+		int index = 0;
+		for(int i = 0; i < 10 ; i++){
+			
+			if(max < count[i]){
+				max = count[i];
+				index = i;
+			}
+		}
+		return index;
 	}
 }
