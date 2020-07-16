@@ -11,6 +11,20 @@
 public class GCD {
 	public int gcd(int m, int n) {
 		// Your code goes here
-		return 1;
+		while(m == n || m == 0 || n== 0){
+			if(m > n){
+				n = m % n;
+			}
+			else{
+				m = n % m;
+			}
+		}
+		if(m == n){
+			return m;
+		}
+		if(m == 0 || n == 0){
+			return 0;
+		}
+		return -1;
 	}
 }
