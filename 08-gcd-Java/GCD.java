@@ -24,19 +24,13 @@ public class GCD {
 			else{
 				n = n % m;
 			}
-			System.out.println(m + " " + n);
 		}
 		if(m == n){
-			// System.out.println("gg1");
 			return m;
 		}
 		if(m == 0 || n == 0){
-			// System.out.println("gg2");
 			return 1;
 		}
 		return -1;
-	}
-	public static void main(String[] args) {
-		System.out.println(gcd(0,1));
 	}
 }
