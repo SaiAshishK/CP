@@ -31,6 +31,6 @@ public class GCD {
 		return -1;
 	}
 	public static void main(String[] args) {
-		System.out.println(gcd(270,250));
+		System.out.println(gcd(88886, 474747));
 	}
 }
