@@ -6,12 +6,7 @@ public class MostFrequentDigit {
 	public int mostFrequentDigit(int n) {
 		// Your code goes here
 		if(n<0){n = -n;}
-		if(n == 0){
-			return 1;
-		}
-		if(n<=9){
-			return n;
-		}
+		
 		
 		String[] s = Integer.toString(n).split("");
 		int[] count = new int[10];
