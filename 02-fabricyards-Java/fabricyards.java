@@ -33,6 +33,6 @@ class fabricyards {
 		double c = inches%36;
 
 
-		return (int)c;
+		return 36 - (int)c;
 	}
 }
