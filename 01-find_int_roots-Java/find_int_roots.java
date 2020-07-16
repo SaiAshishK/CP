@@ -12,7 +12,12 @@ class find_int_roots {
 		// your code goes here
 		
 		int[] arr = {a,b,c};
-		return arr;
+		double coeff = Math.sqrt(Math.pow(arr[1],2) - 4 * arr[0] * arr[2]);
+		double by = 2 * arr[0];
+		double a1 = (-b + coeff)/by;
+		double a2 = (-b - coeff)/by;
+		int[] res = {(int)a1,(int)a2};
+		return res;
 			
 	}
 }
