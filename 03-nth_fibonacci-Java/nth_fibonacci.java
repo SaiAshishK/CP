@@ -18,6 +18,6 @@ class nth_fibonacci {
 			p2 = p3;
 			fun_nthfibonaccinumber(n-1);
 		}
-		return 0;
+		return p3;
 	}
 }
