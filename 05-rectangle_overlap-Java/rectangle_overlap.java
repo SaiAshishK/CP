@@ -16,14 +16,14 @@ class rectangle_overlap {
 		int[] l2 = {top2,left2};
 		int[] r2 = {width2,height2};
 		if (l1[0] >= r2[0] || l2[0] >= r1[0]) { 
-            return false; 
+            return true; 
         } 
   
         // If one rectangle is above other  
         if (l1[1] <= r2[1] || l2[1] <= r1[1]) { 
-            return false; 
+            return true; 
         } 
   
-        return true;
+        return false;
 	}
 }
