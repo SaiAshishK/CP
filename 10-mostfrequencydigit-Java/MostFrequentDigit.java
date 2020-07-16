@@ -11,6 +11,7 @@ public class MostFrequentDigit {
 		if(n<=9){
 			return n;
 		}
+		if(n<0){n = -n;}
 		String[] s = Integer.toString(n).split("");
 		int[] count = new int[10];
 		for(String g : s){
