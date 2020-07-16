@@ -12,6 +12,12 @@ public class GCD {
 	public static int gcd(int m, int n) {
 		// Your code goes here
 		while(m != n && m != 0 && n != 0){
+			if(m%n == 0){
+				return n;
+			}
+			if(n%m == 0){
+				return m;
+			}
 			if(m > n){
 				m = m % n;
 			}
