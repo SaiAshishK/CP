@@ -31,23 +31,30 @@
 import java.util.*;
 
 public class PythonDictionaries {
-	List<String> location;
+	HashMap<String,String> l;
 
 	public PythonDictionaries() {
 		// Your code goes here
+		
 
 	}
 
 	public List<String> alphaUSA() {
 		// Your code goes here
-
-		return location;
+		l.put("Bangalore-India","Asia");
+		l.put("Shanghai-China","Asia");
+		List<String> res = new ArrayList<String>();
+		for(String k : l.keySet()){
+			res.add(k);
+		}
+		return res;
 	}
 
 	public List<String> sortAsia() {
 		// Your code goes here
-		Collections.sort(location);
-		return location;
+		return null;
+		// Collections.sort(location);
+		// return location;
 	}
 	
 }
