@@ -18,9 +18,14 @@ class fabricyards {
 		if(inches == 0){
 			return 0;
 		}
-		// int d = inches36;
+		int d = inches;
+		int c =0;
+		while(d>0){
+			d = d - 36;
+			c++;
+		}
 
-		return 1;
+		return c;
 	}
 
 	public int fun_fabricexcess(int inches){
