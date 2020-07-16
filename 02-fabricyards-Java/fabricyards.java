@@ -20,7 +20,7 @@ class fabricyards {
 		}
 		int d = inches;
 		int c =0;
-		while(d>1){
+		while(d>0){
 			d = d - 36;
 			c++;
 		}
