@@ -8,6 +8,10 @@
 public class DigitCount {
 	public int digitCount(int n) {
 		// Your code goes here
-		return 52311231;
+		String[] s = Integer.toString(n).split("");
+		if(s[0].equals("-")){
+			return s.length-1;
+		}
+		return s.length;
 	}
 }
