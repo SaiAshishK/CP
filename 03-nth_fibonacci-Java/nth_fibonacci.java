@@ -13,7 +13,7 @@ class nth_fibonacci {
 		int p1 = 1;
 		int p2 = 1;
 		int p3 = 0;
-		while(n > 0){
+		while(n > 1){
 			p3 = p1 + p2;
 			p1 = p2;
 			p2 = p3;
