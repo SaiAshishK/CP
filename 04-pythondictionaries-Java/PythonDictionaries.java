@@ -56,5 +56,9 @@ public class PythonDictionaries {
 		// Collections.sort(location);
 		// return location;
 	}
+	public static void main(String[] args) {
+		PythonDictionaries obj = new PythonDictionaries();
+		System.out.println(obj.alphaUSA());
+	}
 	
 }
