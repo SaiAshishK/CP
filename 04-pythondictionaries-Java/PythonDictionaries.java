@@ -60,8 +60,9 @@ public class PythonDictionaries {
 		for(String k : l1.keySet()){
 			res.add(k);
 		}
+		
+		Collections.sort(res);
 		return res;
-		// Collections.sort(location);
 		// return location;
 	}
 	public static void main(String[] args) {
