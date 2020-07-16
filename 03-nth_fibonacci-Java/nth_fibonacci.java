@@ -12,6 +12,9 @@ class nth_fibonacci {
 	int p3 = 0;
 	public int fun_nthfibonaccinumber(int n){
 		// your code goes here
+		if(n == 0){
+			return 0;
+		}
 		while(n > 0){
 			p3 = p1 + p2;
 			p1 = p2;
