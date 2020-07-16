@@ -30,6 +30,9 @@ class fabricyards {
 
 	public int fun_fabricexcess(int inches){
 		// your code goes here
+		if(inches == 0){
+			return 0;
+		}
 		double c = inches%36;
 
 
