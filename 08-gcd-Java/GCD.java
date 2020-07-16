@@ -18,11 +18,14 @@ public class GCD {
 			else{
 				m = n % m;
 			}
+			System.out.println(m + " " + n);
 		}
 		if(m == n){
+			System.out.println("gg1");
 			return m;
 		}
 		if(m == 0 || n == 0){
+			System.out.println("gg2");
 			return 0;
 		}
 		return -1;
