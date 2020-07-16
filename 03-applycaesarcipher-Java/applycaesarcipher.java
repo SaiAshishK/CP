@@ -26,6 +26,10 @@ class applycaesarcipher {
 			if(ascii > 122){
 				ascii = 97 + (ascii%122);
 			}
+			if(ascii < 97){
+				int rem = 97 - ascii;
+				ascii = 122-rem;
+			}
 			System.out.println(ascii+ " "+ch);
 			char s = (char)ascii;
 			res = res + s;
