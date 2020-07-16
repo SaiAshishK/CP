@@ -12,7 +12,25 @@
 class applycaesarcipher {
 	public String fun_applycaesarcipher(String msg, int shift){
 		// your code goes here
-		return "";
+		// String[] sp = msg.split("");
+		String res = "";
+		for(int i = 0; i < msg.length() ; i++){
+			
+			char ch = msg.charAt(i);
+			if(ch == ' '){
+				res = res + " ";
+			}
+			else{
+			int ascii = (int)ch;
+			ascii = ascii + shift;
+			if(ascii > 122){
+				ascii = 97 + (ascii%122);
+			}
+			char s = (char)ascii;
+			res = res + s;
+			}
+		}
+		return res;
 	}
 	
 }
