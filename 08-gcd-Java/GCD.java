@@ -9,7 +9,7 @@
 // When we get to gcd(x,0), the answer is x. So gcd(270, 250) is 10. With this in mind, write the function gcd(x,y) that takes two positive integers x and y and returns their gcd using Euclid's gcd algorithm.
 
 public class GCD {
-	public int gcd(int m, int n) {
+	public static int gcd(int m, int n) {
 		// Your code goes here
 		while(m != n || m != 0 || n != 0){
 			if(m > n){
@@ -26,5 +26,8 @@ public class GCD {
 			return 0;
 		}
 		return -1;
+	}
+	public static void main(String[] args) {
+		System.out.println(gcd(270,250));
 	}
 }
