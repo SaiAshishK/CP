@@ -32,7 +32,7 @@ public class GCD {
 		}
 		if(m == 0 || n == 0){
 			// System.out.println("gg2");
-			return 0;
+			return 1;
 		}
 		return -1;
 	}
