@@ -7,19 +7,17 @@
 
 
 class nth_fibonacci {
-	int p1 = 0;
-	int p2 = 1;
-	int p3 = 0;
+	
 	public int fun_nthfibonaccinumber(int n){
 		// your code goes here
-		if(n == 0){
-			return 0;
-		}
+		int p1 = 0;
+		int p2 = 1;
+		int p3 = 0;
 		while(n > 0){
 			p3 = p1 + p2;
 			p1 = p2;
 			p2 = p3;
-			fun_nthfibonaccinumber(n-1);
+			n--;
 		}
 		return p3;
 	}
