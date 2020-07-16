@@ -3,9 +3,13 @@
 // # find the area of a triangle(return an int) given its side lengths.
 import java.lang.Math.*;
 class threelines_area {
-	public int fun_threelines_area(int a, int b, int c){
+	public static int fun_threelines_area(int a, int b, int c){
 		double p = (a+b+c)/2;
+		System.out.println(p);
 		int area = (int)Math.sqrt(p * (p-a) * (p-b) * (p-c));
 		return area;
+	}
+	public static void main(String[] args) {
+		System.out.println(fun_threelines_area(16, 12, 11));
 	}
 }
