@@ -10,7 +10,7 @@
 // # assert(applyCaesarCipher("zodiac", -2) == "xmbgya")
 
 class applycaesarcipher {
-	public String fun_applycaesarcipher(String msg, int shift){
+	public static String fun_applycaesarcipher(String msg, int shift){
 		// your code goes here
 		// String[] sp = msg.split("");
 		String res = "";
@@ -26,6 +26,7 @@ class applycaesarcipher {
 			if(ascii > 122){
 				ascii = 97 + (ascii%122);
 			}
+			System.out.println(ascii+ " "+ch);
 			char s = (char)ascii;
 			res = res + s;
 			}
@@ -33,7 +34,7 @@ class applycaesarcipher {
 		return res;
 	}
 	public static void main(String[] args) {
-		
+		System.out.println(fun_applycaesarcipher("zodiac", -2));
 	}
 	
 }
