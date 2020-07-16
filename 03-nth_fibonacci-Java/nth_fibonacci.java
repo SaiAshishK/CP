@@ -10,6 +10,9 @@ class nth_fibonacci {
 	
 	public int fun_nthfibonaccinumber(int n){
 		// your code goes here
+		if(n==0){
+			return 1;
+		}
 		int p1 = 1;
 		int p2 = 1;
 		int p3 = 0;
