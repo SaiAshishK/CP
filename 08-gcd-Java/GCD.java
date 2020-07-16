@@ -13,10 +13,10 @@ public class GCD {
 		// Your code goes here
 		while(m != n || m != 0 || n != 0){
 			if(m > n){
-				n = m % n;
+				m = m % n;
 			}
 			else{
-				m = n % m;
+				n = n % m;
 			}
 			System.out.println(m + " " + n);
 		}
