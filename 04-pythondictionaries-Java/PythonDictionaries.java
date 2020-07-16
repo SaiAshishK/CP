@@ -53,7 +53,14 @@ public class PythonDictionaries {
 
 	public List<String> sortAsia() {
 		// Your code goes here
-		return null;
+		HashMap<String,String> l1 = new HashMap<String,String>();
+		l1.put("Atlanta", "USA");
+		l1.put("Mountain View","USA");
+		List<String> res = new ArrayList<String>();
+		for(String k : l1.keySet()){
+			res.add(k);
+		}
+		return res;
 		// Collections.sort(location);
 		// return location;
 	}
