@@ -42,8 +42,8 @@ public class PythonDictionaries {
 	public List<String> alphaUSA() {
 		// Your code goes here
 		HashMap<String,String> l = new HashMap<String,String>();
-		l.put("Bangalore-India","Asia");
-		l.put("Shanghai-China","Asia");
+		l.put("Bangalore - India","Asia");
+		l.put("Shanghai - China","Asia");
 		List<String> res = new ArrayList<String>();
 		for(String k : l.keySet()){
 			res.add(k);
