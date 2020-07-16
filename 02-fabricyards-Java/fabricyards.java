@@ -33,9 +33,8 @@ class fabricyards {
 		if(inches == 0){
 			return 0;
 		}
-		double c = inches%36;
-
-
-		return 36 - (int)c;
+		int d = fun_fabricyards(inches);
+		d = d*36;
+		return d - inches;
 	}
 }
