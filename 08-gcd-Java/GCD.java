@@ -27,16 +27,16 @@ public class GCD {
 			System.out.println(m + " " + n);
 		}
 		if(m == n){
-			System.out.println("gg1");
+			// System.out.println("gg1");
 			return m;
 		}
 		if(m == 0 || n == 0){
-			System.out.println("gg2");
+			// System.out.println("gg2");
 			return 0;
 		}
 		return -1;
 	}
 	public static void main(String[] args) {
-		System.out.println(gcd(88886, 474747));
+		System.out.println(gcd(0,1));
 	}
 }
