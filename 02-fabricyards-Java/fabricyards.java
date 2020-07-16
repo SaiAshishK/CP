@@ -18,17 +18,16 @@ class fabricyards {
 		if(inches == 0){
 			return 0;
 		}
-		int d = inches/36;
+		// int d = inches36;
 
-		return d+1;
+		return 1;
 	}
 
 	public int fun_fabricexcess(int inches){
 		// your code goes here
-		int c = inches/36;
-		c = (c*36) + 36;
-		c = c - inches; 
+		double c = inches%36;
 
-		return c;
+
+		return (int)c;
 	}
 }
