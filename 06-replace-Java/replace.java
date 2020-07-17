@@ -5,7 +5,7 @@
 
 
 class replace {
-	public String fun_replace(String s1, String s2, String s3){
+	public static String fun_replace(String s1, String s2, String s3){
 		String res = "";
 		for(int i =0 ;i < s1.length() ; i++){
 			if(s1.charAt(i) == s2.charAt(0)){
@@ -22,6 +22,9 @@ class replace {
 			}
 		}
 		return s1;
+	}
+	public static void main(String[] args) {
+		System.out.println(fun_replace("helloworld123", "hello", "345"));
 	}
 	
 }
