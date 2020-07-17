@@ -30,7 +30,7 @@ class applycaesarcipher {
 					}
 					if(ascii < 65){
 						int rem = 65 - ascii;
-						ascii = 123 - rem;
+						ascii = 90 - rem;
 					}
 					char s = (char)ascii;
 					res = res + s;
