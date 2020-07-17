@@ -26,7 +26,7 @@ class applycaesarcipher {
 				{
 					ascii = ascii + shift;
 					if(ascii > 90){
-						ascii = 65 + (ascii%90);
+						ascii = 64 + (ascii%90);
 					}
 					if(ascii < 65){
 						int rem = 65 - ascii;
