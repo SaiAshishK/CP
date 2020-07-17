@@ -33,7 +33,7 @@ class replace {
 		return res;
 	}
 	public static void main(String[] args) {
-		System.out.println(fun_replace("helloworld123", "34567", "345"));
+		System.out.println(fun_replace("helloworld123", "123", "345"));
 	}
 	
 }
