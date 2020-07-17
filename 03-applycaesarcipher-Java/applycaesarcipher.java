@@ -21,20 +21,35 @@ class applycaesarcipher {
 				res = res + " ";
 			}
 			else{
-			int ascii = (int)ch;
-			System.out.println(ascii+ " "+ch);
-			ascii = ascii + shift;
-			if(ascii > 122){
-				ascii = 97 + (ascii%122);
-			}
-			if(ascii < 97){
-				int rem = 97 - ascii;
-				ascii = 123-rem;
-			}
-			
-			char s = (char)ascii;
-			System.out.println(ascii+ " "+s);
-			res = res + s;
+				int ascii = (int)ch;
+				if(ascii >=65 || ascii <= 90)
+				{
+					ascii = ascii + shift;
+					if(ascii > 90){
+						ascii = 65 + (ascii%90);
+					}
+					if(ascii < 65){
+						int rem = 65 - ascii;
+						ascii = 123 - rem;
+					}
+					char s = (char)ascii;
+					res = res + s;
+				}
+				else{
+					System.out.println(ascii+ " "+ch);
+					ascii = ascii + shift;
+					if(ascii > 122){
+						ascii = 97 + (ascii%122);
+					}
+					if(ascii < 97){
+						int rem = 97 - ascii;
+						ascii = 123-rem;
+					}
+					
+					char s = (char)ascii;
+					System.out.println(ascii+ " "+s);
+					res = res + s;
+				}
 			}
 		}
 		return res;
