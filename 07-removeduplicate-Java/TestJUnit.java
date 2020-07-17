@@ -17,7 +17,7 @@ public class TestJUnit {
    @Test
    public void testCase1() {
 		assertEquals(new RemoveDuplicate().removeDuplicate("JavaPython"), "JavPython");
-      assertEquals(new RemoveDuplicate().removeDuplicate("HelloWorld"), "HelloWrld");
+      assertEquals(new RemoveDuplicate().removeDuplicate("HelloWorld"), "HeloWrd");
       assertEquals(new RemoveDuplicate().removeDuplicate("EEE"), "E");
       assertEquals(new RemoveDuplicate().removeDuplicate("a a "), "a ");
    }
