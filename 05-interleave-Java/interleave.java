@@ -8,7 +8,36 @@
 
 class interleave {
 	public String fun_interleave(String s1, String s2){
-		return "";
+		int max = 0;
+		int con = 0;
+		String res = "";
+		if(s1.length() == s2.length()){
+			max = s1.length();
+			con = 1;
+		}
+		else if(s1.length() > s2.length()){
+			max = s2.length();
+			con = 2;
+		}
+		else{
+			max = s1.length();
+			con = 3;
+		}
+		for(int i = 0; i < max ; i++){
+			res = res + s1.charAt(i);
+			res = res + s2.charAt(i);
+		}
+		if(con == 2){
+			for(int i = max ; i < s1.length(); i++){
+				res = res + s1.charAt(i);
+			}
+		}
+		if(con == 3){
+			for(int i = max ; i < s2.length(); i++){
+				res = res + s2.charAt(i);
+			}
+		}
+			return res;
 	}
 	
 }
