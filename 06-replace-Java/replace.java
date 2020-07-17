@@ -13,7 +13,7 @@ class replace {
 				if(s1.substring(i, i+s2.length()).equals(s2)){
 
 					res = res + s3;
-					i = i + s2.length();
+					i = i + s2.length()-1;
 				}
 				else{
 					System.out.println("1. "+s1.charAt(i));
