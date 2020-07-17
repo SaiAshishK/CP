@@ -6,6 +6,13 @@
 public class IsRotated {
 	public boolean isRotated(String str1, String str2) {
 		// Your code goes here
+		String str3 = "";
+		for(int i = str1.length()-1 ;i >0 ;i--){
+			str3 = str3 + str1.charAt(i);
+		}
+		if(str2.equals(str3)){
+			return true;
+		}
 		return false;
 	}
 }
