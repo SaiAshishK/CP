@@ -21,6 +21,9 @@ class replace {
 						res = res + s1.charAt(i);
 					}
 				}
+				else{
+					res = res + s1.charAt(i);
+				}
 			}
 			else{
 				System.out.println("2. "+s1.charAt(i));
