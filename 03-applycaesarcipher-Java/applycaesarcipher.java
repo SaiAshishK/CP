@@ -36,7 +36,6 @@ class applycaesarcipher {
 					res = res + s;
 				}
 				else{
-					System.out.println(ascii+ " "+ch);
 					ascii = ascii + shift;
 					if(ascii > 122){
 						ascii = 96 + (ascii%122);
@@ -47,15 +46,11 @@ class applycaesarcipher {
 					}
 					
 					char s = (char)ascii;
-					System.out.println(ascii+ " "+s);
 					res = res + s;
 				}
 			}
 		}
 		return res;
-	}
-	public static void main(String[] args) {
-		System.out.println(fun_applycaesarcipher("zodiac", -2));
 	}
 	
 }
