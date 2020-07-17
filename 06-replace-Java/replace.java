@@ -9,7 +9,7 @@ class replace {
 		String res = "";
 		for(int i =0 ;i < s1.length() ; i++){
 			if(s1.charAt(i) == s2.charAt(0)){
-				System.out.println("---------"+(i+s2.length())+"------"+s1.length());
+				// System.out.println("---------"+(i+s2.length())+"------"+s1.length());
 				if(i + s2.length() <= s1.length()){
 					if(s1.substring(i, i+s2.length()).equals(s2)){
 
