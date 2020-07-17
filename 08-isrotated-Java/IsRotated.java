@@ -7,7 +7,7 @@ public class IsRotated {
 	public static boolean isRotated(String str1, String str2) {
 		// Your code goes here
 		String str3 = "";
-		for(int i = str1.length()-1 ;i >0 ;i--){
+		for(int i = str1.length()-1 ;i >=0 ;i--){
 			str3 = str3 + str1.charAt(i);
 		}
 		System.out.println(str3);
