@@ -22,7 +22,7 @@ class applycaesarcipher {
 			}
 			else{
 				int ascii = (int)ch;
-				if(ascii >=65 || ascii <= 90)
+				if(ascii >=65 && ascii <= 90)
 				{
 					ascii = ascii + shift;
 					if(ascii > 90){
