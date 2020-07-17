@@ -16,10 +16,12 @@ class replace {
 					i = i + s2.length();
 				}
 				else{
+					System.out.println("1. "+s1.charAt(i));
 					res = res + s1.charAt(i);
 				}
 			}
 			else{
+				System.out.println("2. "+s1.charAt(i));
 				res = res + s1.charAt(i);
 			}
 		}
