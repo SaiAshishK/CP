@@ -17,6 +17,6 @@ public class IsRotated {
 		return false;
 	}
 	public static void main(String[] args) {
-		System.out.println(isRotated("XYZ", "ZYX"));
+		System.out.println(isRotated("12345", "54321"));
 	}
 }
