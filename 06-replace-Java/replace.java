@@ -25,7 +25,7 @@ class replace {
 				res = res + s1.charAt(i);
 			}
 		}
-		return s1;
+		return res;
 	}
 	public static void main(String[] args) {
 		System.out.println(fun_replace("helloworld123", "hello", "345"));
