@@ -4,7 +4,7 @@
 // "XYZ" and "YXZ" then return false.
 
 public class IsRotated {
-	public boolean isRotated(String str1, String str2) {
+	public static boolean isRotated(String str1, String str2) {
 		// Your code goes here
 		String str3 = "";
 		for(int i = str1.length()-1 ;i >0 ;i--){
@@ -14,5 +14,8 @@ public class IsRotated {
 			return true;
 		}
 		return false;
+	}
+	public static void main(String[] args) {
+		System.out.println(isRotated("XYZ", "ZYX"));
 	}
 }
