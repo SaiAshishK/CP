@@ -14,6 +14,7 @@
 // may assume only contain numbers, and returns a new 2d list that is the result of adding the two matrices. Return 
 // None if the two matrices 
 // cannot be added because they are of different dimensions.
+import java.util.*;
 
 public class MatrixAdd {
 	public static int[][] matrixAdd(int[][] L, int[][] M) {
@@ -33,6 +34,6 @@ public class MatrixAdd {
 		// return new int[0][0];
 	}
 	public static void main(String[] args) {
-		System.out.println(matrixAdd(new int[][]{{1,  2,  3},{4,  5,  6}}, new int[][]{{21, 22, 23}, {24, 25, 26}}));
+		System.out.println(Arrays.toString(matrixAdd(new int[][]{{1,  2,  3},{4,  5,  6}}, new int[][]{{21, 22, 23}, {24, 25, 26}})));
 	}
 }
