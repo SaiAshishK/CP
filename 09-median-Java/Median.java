@@ -6,12 +6,13 @@
 public class Median {
 	public static int median(double[] list) {
 		// Your code goes here
+		int p = (list.length/2);
 		if(list.length%2==0){
-			int res = (int)((list[list.length/2]+list[(list.length/2)-1])/2);
+			int res = (int)((list[p]+list[p-1])/2);
 			return res;
 		}
 		else{
-			return (int)list[list.length/2];
+			return (int)list[p];
 		}
 		// return 0;
 	}
