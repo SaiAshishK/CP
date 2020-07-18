@@ -23,6 +23,6 @@ public class SmallestDifference {
         return res;
     }
     public static void main(String[] args) {
-        System.out.println(smallestDifference(new int[]{1, 1}));
+        System.out.println(smallestDifference(new int[]{-59,-36,-13,1,-53,-92,-2,-96,-54,75}));
     }
 }
