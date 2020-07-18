@@ -9,6 +9,16 @@ public class SmallestDifference {
 
     public int smallestDifference(int[] a) {
         // Your code goes here
-        return -1;
+        if(a.length == 0){
+            return -1;
+        }
+        int res = 500;
+        for(int i = 0 ; i < a.length-1 ; i++){
+            int c = Math.abs(a[i] - a[i+1]);
+            if(c < res){
+                res = c;
+            }
+        }
+        return res;
     }
 }
