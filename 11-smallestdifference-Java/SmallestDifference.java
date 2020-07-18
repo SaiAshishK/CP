@@ -15,6 +15,7 @@ public class SmallestDifference {
         int res = 500;
         for(int i = 0 ; i < a.length-1 ; i++){
             int c = Math.abs(a[i] - a[i+1]);
+            System.out.println(c);
             if(c < res){
                 res = c;
             }
