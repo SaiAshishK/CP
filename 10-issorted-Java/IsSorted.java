@@ -18,7 +18,6 @@ public class IsSorted {
 		System.out.println(rev);
 		if(rev == true){
 			for(int i  = 1 ; i < list.length-1 ; i++){
-				System.out.println("1.  "+list[i]+"   "+list[i+1]);
 				if(list[i] < list[i+1]){
 					return false;
 				}
@@ -27,7 +26,6 @@ public class IsSorted {
 		}
 		else{
 			for(int i  = 1 ; i < list.length-1 ; i++){
-				System.out.println("2.  "+list[i]+"   "+list[i+1]);
 				if(list[i] > list[i+1]){
 					
 					return false;
@@ -36,8 +34,5 @@ public class IsSorted {
 			return true;
 		}
 		// return false;
-	}
-	public static void main(String[] args) {
-		System.out.println(isSorted(new double[]{1, 2, 3, 4, 5}));
 	}
 }
