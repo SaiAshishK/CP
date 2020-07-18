@@ -19,6 +19,7 @@ import java.util.*;
 public class MatrixAdd {
 	public static int[][] matrixAdd(int[][] L, int[][] M) {
 		int[][] res = new int[L.length][L[0].length];
+		try{
 		if(L.length == M.length && L[0].length == M[0].length && L[1].length == M[1].length){
 			for(int  i = 0 ;i < L.length ; i++){
 				for(int j = 0 ; j < L[0].length ; j++){
@@ -30,6 +31,10 @@ public class MatrixAdd {
 		else{
 			return null;
 		}
+	}
+	catch(Exception e){
+		return null;
+	}
 		// your code goes here
 		// return new int[0][0];
 	}
