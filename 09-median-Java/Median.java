@@ -4,7 +4,7 @@
 // element. If the list is empty, return None.
 
 public class Median {
-	public int median(double[] list) {
+	public static int median(double[] list) {
 		// Your code goes here
 		if(list.length%2==0){
 			int res = (int)((list[list.length/2]+list[(list.length/2)-1])/2);
@@ -14,5 +14,8 @@ public class Median {
 			return (int)list[list.length/2];
 		}
 		// return 0;
+	}
+	public static void main(String[] args) {
+		System.out.println(median(new double[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
 	}
 }
