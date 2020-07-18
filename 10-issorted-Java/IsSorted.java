@@ -8,6 +8,9 @@
 public class IsSorted {
 	public static boolean isSorted(double[] list) {
 		// Your code goes here
+		if(list.length == 0 || list.length == 1 || list.length == 2){
+			return true;
+		}
 		boolean rev = false;
 		if(list[0] > list[1]){
 			rev = true;
