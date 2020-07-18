@@ -7,7 +7,7 @@ public class Median {
 	public int median(double[] list) {
 		// Your code goes here
 		if(list.length%2==0){
-			int res = (int)((list[list.length/2]+list[(list.length/2)+1])/2);
+			int res = (int)((list[list.length/2]+list[(list.length/2)-1])/2);
 			return res;
 		}
 		else{
