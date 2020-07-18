@@ -16,6 +16,6 @@ public class Median {
 		// return 0;
 	}
 	public static void main(String[] args) {
-		System.out.println(median(new double[]{0}));
+		System.out.println(median(new double[]{1}));
 	}
 }
