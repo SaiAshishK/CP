@@ -34,6 +34,7 @@ public class MatrixAdd {
 		// return new int[0][0];
 	}
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString(matrixAdd(new int[][]{{1,  2,  3},{4,  5,  6}}, new int[][]{{21, 22, 23}, {24, 25, 26}})));
+		int[][] re = matrixAdd(new int[][]{{1,  2,  3},{4,  5,  6}}, new int[][]{{21, 22, 23}, {24, 25, 26}});
+		System.out.println(Arrays.toString(re[0]));
 	}
 }
