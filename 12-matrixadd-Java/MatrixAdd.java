@@ -17,7 +17,9 @@
 
 public class MatrixAdd {
 	public int[][] matrixAdd(int[][] L, int[][] M) {
-		if(L.length == M.length && L[0].length == M[0].length){}
+		if(L.length == M.length && L[0].length == M[0].length){
+			
+		}
 		else{
 			return null;
 		}
