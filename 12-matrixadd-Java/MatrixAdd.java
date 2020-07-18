@@ -17,13 +17,19 @@
 
 public class MatrixAdd {
 	public int[][] matrixAdd(int[][] L, int[][] M) {
+		int[][] res = new int[L.length][L[0].length];
 		if(L.length == M.length && L[0].length == M[0].length){
-			
+			for(int  i = 0 ;i < L.length ; i++){
+				for(int j = 0 ; j < L[0].length ; j++){
+					res[i][j] = L[i][j] + M[i][j];
+				}
+			}
+			return res;
 		}
 		else{
 			return null;
 		}
 		// your code goes here
-		return new int[0][0];
+		// return new int[0][0];
 	}
 }
