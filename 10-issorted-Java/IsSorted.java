@@ -8,6 +8,26 @@
 public class IsSorted {
 	public boolean isSorted(double[] list) {
 		// Your code goes here
-		return false;
+		boolean rev = false;
+		if(list[0] > list[1]){
+			rev = true;
+		}
+		if(rev == true){
+			for(int i  = 1 ; i < list.length-1 ; i++){
+				if(list[i] < list[i+1]){
+					return false;
+				}
+			}
+			return true;
+		}
+		else{
+			for(int i  = 1 ; i < list.length-1 ; i++){
+				if(list[i] > list[i+1]){
+					return false;
+				}
+			}
+			return true;
+		}
+		// return false;
 	}
 }
