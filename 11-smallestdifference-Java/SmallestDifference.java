@@ -9,6 +9,7 @@ public class SmallestDifference {
 
     public static int smallestDifference(int[] a) {
         // Your code goes here
+        Arrays.sort(a);
         if(a.length == 0){
             return -1;
         }
