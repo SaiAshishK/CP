@@ -6,7 +6,7 @@
 // the list.
 
 public class IsSorted {
-	public boolean isSorted(double[] list) {
+	public static boolean isSorted(double[] list) {
 		// Your code goes here
 		boolean rev = false;
 		if(list[0] > list[1]){
@@ -29,5 +29,8 @@ public class IsSorted {
 			return true;
 		}
 		// return false;
+	}
+	public static void main(String[] args) {
+		System.out.println(isSorted(new double[]{1, 2, 3, 4, 5}));
 	}
 }
