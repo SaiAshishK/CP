@@ -25,6 +25,6 @@ public class TestJUnit {
       assertEquals(new Median().median(new double[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}), 5);
       assertEquals(new Median().median(new double[]{1, 2, 3, 4, 5.5, 5.1, 7, 8, 9, 10}), 5);
       assertEquals(new Median().median(new double[]{1}), 1);
-      // assertEquals(new Median().median(new double[0]), 0);
+      assertEquals(new Median().median(new double[0]), 0);
    }
 }
