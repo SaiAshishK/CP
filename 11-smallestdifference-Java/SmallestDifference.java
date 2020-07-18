@@ -7,7 +7,7 @@ import java.util.*;
 
 public class SmallestDifference {
 
-    public int smallestDifference(int[] a) {
+    public static int smallestDifference(int[] a) {
         // Your code goes here
         if(a.length == 0){
             return -1;
@@ -20,5 +20,8 @@ public class SmallestDifference {
             }
         }
         return res;
+    }
+    public static void main(String[] args) {
+        System.out.println(smallestDifference(new int[]{1, 1}));
     }
 }
