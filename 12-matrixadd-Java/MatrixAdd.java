@@ -16,7 +16,7 @@
 // cannot be added because they are of different dimensions.
 
 public class MatrixAdd {
-	public int[][] matrixAdd(int[][] L, int[][] M) {
+	public static int[][] matrixAdd(int[][] L, int[][] M) {
 		int[][] res = new int[L.length][L[0].length];
 		if(L.length == M.length && L[0].length == M[0].length){
 			for(int  i = 0 ;i < L.length ; i++){
@@ -31,5 +31,8 @@ public class MatrixAdd {
 		}
 		// your code goes here
 		// return new int[0][0];
+	}
+	public static void main(String[] args) {
+		System.out.println(matrixAdd(new int[][]{{1,  2,  3},{4,  5,  6}}, new int[][]{{21, 22, 23}, {24, 25, 26}}));
 	}
 }
