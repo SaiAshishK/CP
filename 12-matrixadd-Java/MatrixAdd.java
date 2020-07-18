@@ -35,6 +35,6 @@ public class MatrixAdd {
 	}
 	public static void main(String[] args) {
 		int[][] re = matrixAdd(new int[][]{{1,  2,  3},{4,  5,  6}}, new int[][]{{21, 22, 23}, {24, 25, 26}});
-		System.out.println(Arrays.toString(re[1]));
+		System.out.println(Arrays.toString(re[0]));
 	}
 }
