@@ -24,8 +24,9 @@ public class IsSorted {
 		}
 		else{
 			for(int i  = 1 ; i < list.length-1 ; i++){
+				System.out.println("2.  "+list[i]+"   "+list[i+1]);
 				if(list[i] > list[i+1]){
-					System.out.println("2.  "+list[i]+"   "+list[i+1]);
+					
 					return false;
 				}
 			}
