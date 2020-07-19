@@ -49,47 +49,44 @@ public class BonusPlayThreeDiceYahtzee {
 			rev = rev + sps[i];
 			sp[p++] = Integer.parseInt(sps[i]);
 		}
-
-		int n1 = sp[0];
-		int n2 = sp[1];
-		int n3 = sp[2];
-		if(n1 == n2 && n2== n3){
-			int res = (n1 *100) + (n1 *10) + n1;
-			int res1 = 20 + (3*n1);
+		int[] arre = {sp[0],sp[1],sp[2]};
+		if(arre[0] == arre[1] && arre[1]== arre[2]){
+			int res = (arre[0] *100) + (arre[0] *10) + arre[0];
+			int res1 = 20 + (3*arre[0]);
 			return new int[]{res,res1};
 		}
 		for(int j = 3 ; j < sp.length ; j++){
-			if(n1 != n2 && n2 != n3 && n1 != n3){
-				if(max(n1,n2,n3) == n1){
-					n2 = sp[j];
-					n3 = sp[j+1];
+			if(arre[0] != arre[1] && arre[1] != arre[2] && arre[0] != arre[2]){
+				if(max(arre[0],arre[1],arre[2]) == arre[0]){
+					arre[1] = sp[j];
+					arre[2] = sp[j+1];
 					j++;
 				}
-				else if(max(n1,n2,n3) == n2){
-					n1 = sp[j];
-					n3 = sp[j+1];
+				else if(max(arre[0],arre[1],arre[2]) == arre[1]){
+					arre[0] = sp[j];
+					arre[2] = sp[j+1];
 					j++;
 				}
-				else if(max(n1,n2,n3) == n3){
-					n1 = sp[j];
-					n2 = sp[j+1];
+				else if(max(arre[0],arre[1],arre[2]) == arre[2]){
+					arre[0] = sp[j];
+					arre[1] = sp[j+1];
 					j++;
 				}
 			}
-			else if(n1 == n2){
-				n3 = sp[j];
+			else if(arre[0] == arre[1]){
+				arre[2] = sp[j];
 				break;
 			}
-			else if(n2 == n3){
-				n1 = sp[j];
+			else if(arre[1] == arre[2]){
+				arre[0] = sp[j];
 				break;
 			}
-			else if(n1 == n3){
-				n2 = sp[j];
+			else if(arre[0] == arre[2]){
+				arre[1] = sp[j];
 				break;
 			}
 		}
-		int[] res12 = {n1,n2,n3};
+		int[] res12 = {arre[0],arre[1],arre[2]};
 		Arrays.sort(res12);
 		int cd = 0;
 		for(int o = res12.length-1 ; o >= 0 ; o--){
