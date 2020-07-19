@@ -12,7 +12,6 @@ public class LinkedList{
 	Element head;
 	public LinkedList(Element head){
 		this.head = head;
-		head.next = null;
 	}
 
 	public void append(Element new_element){
@@ -28,15 +27,13 @@ public class LinkedList{
 	public Element get_position(int position){
 		// Get an element from a particular position.
         // Assume the first position is "1".
-        // Return null if position is not in the list
+        // Return nul1 if position is not in the list
 		// Your code goes here
 		Element c = head;
 		
 			for(int i = 0 ; i < position-1 ; i++){
 				System.out.println(c.value+"  ");
-				if(c.next == null){
-					return null;
-				}
+				
 				c = c.next;
 				
 			}
@@ -82,7 +79,12 @@ public class LinkedList{
 		LinkedList l1 = new LinkedList(e1);
 		l1.append(new Element(2));
 		l1.append(new Element(3));
-		l1.delete(2);
+		Element e4 = new Element(4);
+		l1.insert(e4,3);
+		l1.delete(1);
+		System.out.println(l1.get_position(1).value);
+		System.out.println(l1.get_position(2).value);
+		System.out.println(l1.get_position(3).value);
 		System.out.println(l1.get_position(3).value);
 	}
 }
