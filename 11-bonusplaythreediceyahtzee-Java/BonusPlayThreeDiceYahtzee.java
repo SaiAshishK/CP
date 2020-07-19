@@ -92,7 +92,6 @@ public class BonusPlayThreeDiceYahtzee {
 		for(int o = res12.length-1 ; o >= 0 ; o--){
 			cd = cd * 10 + res12[o];
 		}
-		System.out.println(cd);
 		int score = 0;
 		String[] qw = Integer.toString(cd).split("");
 		int p1 = Integer.parseInt(qw[0]);
@@ -123,8 +122,5 @@ public class BonusPlayThreeDiceYahtzee {
 			return p2;
 		}
 		return p3;
-	}
-	public static void main(String[] args) {
-		System.out.println(bonusPlayThreeDiceYahtzee(2312413));
 	}
 }
