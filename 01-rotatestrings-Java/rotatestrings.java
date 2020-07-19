@@ -6,6 +6,19 @@
 
 class rotatestrings {
 	public String fun_rotatestrings(String s, int n){
-		return s;
+		if(n > 0 ){
+			String res = "";
+			String s1 = s.substring(0, n);
+			String[] sp = s.split("");
+			for(int i = n ; i < sp.length ;i++){
+				res = res + sp[i];
+			}
+			res = res + s1;
+			return res;
+		}
+		else{
+			return s;
+		}
+		
 	}
 }
