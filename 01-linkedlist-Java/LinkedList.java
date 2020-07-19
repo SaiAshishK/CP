@@ -64,6 +64,7 @@ public class LinkedList{
 			head = head.next;
 			temp = null;
 		}
+		else{
 		try{
 		while(temp.next.value != value){
 			temp = temp.next;
@@ -75,6 +76,7 @@ public class LinkedList{
 		catch(Exception e){
 			// System.out.println("n");
 		}
+	}
 		
 	}
 
