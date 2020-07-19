@@ -32,7 +32,7 @@ public class LinkedList{
 		Element c = head;
 		
 			for(int i = 0 ; i < position-1 ; i++){
-				System.out.println(c.value+"  ");
+				// System.out.println(c.value+"  ");
 				
 				c = c.next;
 				
@@ -61,7 +61,7 @@ public class LinkedList{
 		// Your code goes here
 		Element temp = head;
 		try{
-		while(temp.next.value != value){
+		while(temp.value != value){
 			temp = temp.next;
 		}
 		Element temp1 = temp.next;
@@ -69,7 +69,7 @@ public class LinkedList{
 		temp.next = temp1;
 		}	
 		catch(Exception e){
-			System.out.println("n");
+			// System.out.println("n");
 		}
 		
 	}
