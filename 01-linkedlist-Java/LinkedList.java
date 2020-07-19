@@ -16,6 +16,12 @@ public class LinkedList{
 
 	public void append(Element new_element){
 		// Your code goes here
+		Element temp = head;
+		while(temp.next!= null){
+			temp = temp.next;
+		}
+		temp.next = new_element;
+
 	}
 
 	public Element get_position(int position){
@@ -23,7 +29,16 @@ public class LinkedList{
         // Assume the first position is "1".
         // Return null if position is not in the list
 		// Your code goes here
-		return null;
+		Element c = head;
+		try{
+			for(int i = 0 ; i < position-1 ; i++){
+				c = c.next;
+			}
+			return c;
+		}
+		catch(Exception e){
+			return null;
+		}
 	}
 
 	public void insert(Element new_element, int position){
@@ -32,11 +47,21 @@ public class LinkedList{
        // Inserting at position 3 means between
        // the 2nd and 3rd elements."""
 		// Your code goes here
+		Element temp = head;
+		for(int i = 1 ; i < position-1 ; i++){
+			temp = temp.next;
+		}
+		Element temp1= temp.next;
+		temp.next = new_element;
+		new_element.next = temp1;
 
 	}
 
 	public void delete(int value){
 		// Delete the first node with a given value.
 		// Your code goes here
+		Element temp = head;
+		head = null;
+		head = temp;
 	}
 }
