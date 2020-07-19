@@ -72,4 +72,13 @@ public class LinkedList{
 		catch(Exception e){}
 		
 	}
+
+	public static void main(String[] args) {
+		Element e1 = new Element(1);
+		LinkedList l1 = new LinkedList(e1);
+		l1.append(new Element(2));
+		l1.append(new Element(3));
+		l1.delete(2);
+		System.out.println(l1.get_position(2));
+	}
 }
