@@ -61,7 +61,9 @@ public class LinkedList{
 		// Delete the first node with a given value.
 		// Your code goes here
 		Element temp = head;
-		head = null;
-		head = temp;
+		while(temp.next.value != value){
+			temp = temp.next;
+		}
+
 	}
 }
