@@ -49,10 +49,56 @@ public class BonusPlayThreeDiceYahtzee {
 			rev = rev + sps[i];
 			sp[p++] = Integer.parseInt(sps[i]);
 		}
-		String abs = rev.substring(0 , 3);
-		System.out.println(Arrays.toString(sp));
-		return new int[0];
+
+		int n1 = sp[0];
+		int n2 = sp[1];
+		int n3 = sp[2];
+		if(n1 == n2 && n2== n3){
+			int res = (n1 *100) + (n1 *10) + n1;
+			int res1 = 20 + (3*n1);
+			return new int[]{res,res1};
+		}
+		for(int j = 3 ; j < sp.length ; j++){
+			if(n1 != n2 && n2 != n3 && n1 != n3){
+				if(n1 > n2 && n1 > n3){
+					n2 = sp[j];
+					n3 = sp[j+1];
+					j++;
+				}
+				else if(n2 > n1 && n2 > n3){
+					n1 = sp[j];
+					n3 = sp[j+1];
+					j++;
+				}
+				else if(n3 > n1 && n3 > n2){
+					n1 = sp[j];
+					n2 = sp[j+1];
+					j++;
+				}
+			else if(n1 == n2){
+				n3 = sp[j];
+				break;
+			}
+			else if(n2 == n3){
+				n1 = sp[j];
+				break;
+			}
+			else if(n1 == n3){
+				n2 = sp[j];
+				break;
+			}
+		}
+		int[] res12 = {n1,n2,n3};
+		Arrays.sort(res12);
+		int cd = 0;
+		for(int o = res12.length-1 ; o > 0 ; o--){
+			cd = cd * 10 + res12[o];
+		}
+		System.out.println(cd);
+		
 	}
+	return sp;
+}
 	public static void main(String[] args) {
 		System.out.println(bonusPlayThreeDiceYahtzee(2312413));
 	}
