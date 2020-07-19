@@ -37,7 +37,7 @@
 // assert(bonusPlayThreeDiceYahtzee(2633413) == (633, 16))
 // assert(bonusPlayThreeDiceYahtzee(2333413) == (333, 29))
 // assert(bonusPlayThreeDiceYahtzee(2333555) == (555, 35))
-
+import java.util.*;
 public class BonusPlayThreeDiceYahtzee {
 	public static int[] bonusPlayThreeDiceYahtzee(int dice) {
 		// Your code goes here
@@ -50,7 +50,7 @@ public class BonusPlayThreeDiceYahtzee {
 			sp[p++] = Integer.parseInt(sps1);
 		}
 		String abs = rev.substring(0 , 3);
-		
+		System.out.println(Arrays.toString(sp));
 		return new int[0];
 	}
 	public static void main(String[] args) {
