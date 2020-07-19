@@ -69,7 +69,9 @@ public class LinkedList{
 		temp1 = temp1.next;
 		temp.next = temp1;
 		}	
-		catch(Exception e){}
+		catch(Exception e){
+			System.out.println("n");
+		}
 		
 	}
 
