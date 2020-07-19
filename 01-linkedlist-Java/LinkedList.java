@@ -30,15 +30,18 @@ public class LinkedList{
         // Return null if position is not in the list
 		// Your code goes here
 		Element c = head;
-		try{
+		
 			for(int i = 0 ; i < position-1 ; i++){
 				System.out.println(c.value);
+				try{
 				c = c.next;
+				}
+				catch(Exception e){
+					return null;
+				}
 			}
-		}
-		catch(Exception e){
-			return null;
-		}
+		
+		
 			return c;
 		
 		
