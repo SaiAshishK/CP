@@ -45,7 +45,7 @@ public class BonusPlayThreeDiceYahtzee {
 		String[] sps = Integer.toString(dice).split("");
 		String rev = "";
 		int p = 0;
-		for(int i = sps.length-1 ; i > 0 ; i++){
+		for(int i = sps.length-1 ; i >= 0 ; i--){
 			rev = rev + sps[i];
 			sp[p++] = Integer.parseInt(sps[i]);
 		}
