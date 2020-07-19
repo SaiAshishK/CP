@@ -75,6 +75,7 @@ public class BonusPlayThreeDiceYahtzee {
 					n2 = sp[j+1];
 					j++;
 				}
+			}
 			else if(n1 == n2){
 				n3 = sp[j];
 				break;
@@ -95,10 +96,9 @@ public class BonusPlayThreeDiceYahtzee {
 			cd = cd * 10 + res12[o];
 		}
 		System.out.println(cd);
-		
+		return sp;
 	}
-	return sp;
-}
+	
 	public static void main(String[] args) {
 		System.out.println(bonusPlayThreeDiceYahtzee(2312413));
 	}
