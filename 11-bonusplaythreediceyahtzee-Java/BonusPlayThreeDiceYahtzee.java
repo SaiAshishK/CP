@@ -60,17 +60,17 @@ public class BonusPlayThreeDiceYahtzee {
 		}
 		for(int j = 3 ; j < sp.length ; j++){
 			if(n1 != n2 && n2 != n3 && n1 != n3){
-				if(n1 > n2 && n1 > n3){
+				if(max(n1,n2,n3) == n1){
 					n2 = sp[j];
 					n3 = sp[j+1];
 					j++;
 				}
-				else if(n2 > n1 && n2 > n3){
+				else if(max(n1,n2,n3) == n2){
 					n1 = sp[j];
 					n3 = sp[j+1];
 					j++;
 				}
-				else if(n3 > n1 && n3 > n2){
+				else if(max(n1,n2,n3) == n3){
 					n1 = sp[j];
 					n2 = sp[j+1];
 					j++;
@@ -96,9 +96,37 @@ public class BonusPlayThreeDiceYahtzee {
 			cd = cd * 10 + res12[o];
 		}
 		System.out.println(cd);
-		return sp;
+		int score = 0;
+		String[] qw = Integer.toString(cd).split("");
+		int p1 = Integer.parseInt(qw[0]);
+		int p2 = Integer.parseInt(qw[1]);
+		int p3 = Integer.parseInt(qw[2]);
+		if(p1 ==p2 && p2 == p3){
+			score = 20 + (3*p1);
+		}
+		else if(p1 == p3 || p1 == p2){
+			score = 10 + p1 + p1;
+		}
+		else if(p2 == p3){
+			score = 10 + p2 + p2;
+		}
+		else{
+			score = max(p1,p2,p3);
+		}
+
+		
+		return new int[]{cd,score};
 	}
 	
+	public static int max(int p1, int p2 , int p3){
+		if( p1 > p2 && p1 > p3){
+			return p1;
+		}
+		else if(p2 >p1 && p2 > p3){
+			return p2;
+		}
+		return p3;
+	}
 	public static void main(String[] args) {
 		System.out.println(bonusPlayThreeDiceYahtzee(2312413));
 	}
