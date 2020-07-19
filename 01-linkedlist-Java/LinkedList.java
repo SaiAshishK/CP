@@ -32,6 +32,7 @@ public class LinkedList{
 		Element c = head;
 		try{
 			for(int i = 0 ; i < position-1 ; i++){
+				System.out.println(c.value);
 				c = c.next;
 			}
 		}
