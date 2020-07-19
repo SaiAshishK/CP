@@ -12,6 +12,7 @@ public class LinkedList{
 	Element head;
 	public LinkedList(Element head){
 		this.head = head;
+		head.next = null;
 	}
 
 	public void append(Element new_element){
