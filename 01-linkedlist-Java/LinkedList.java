@@ -32,7 +32,7 @@ public class LinkedList{
 		Element c = head;
 		
 			for(int i = 0 ; i < position-1 ; i++){
-				System.out.println(c.value+"  "+c.next.value);
+				System.out.println(c.value+"  ");
 				if(c.next == null){
 					return null;
 				}
