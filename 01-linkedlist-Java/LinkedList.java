@@ -61,11 +61,11 @@ public class LinkedList{
 		// Your code goes here
 		Element temp = head;
 		try{
-		while(temp.value != value){
+		while(temp.next.value != value){
 			temp = temp.next;
 		}
 		Element temp1 = temp.next;
-		temp1 = temp1.next;
+		// temp1 = temp1.next;
 		temp.next = temp1;
 		}	
 		catch(Exception e){
