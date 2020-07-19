@@ -79,6 +79,6 @@ public class LinkedList{
 		l1.append(new Element(2));
 		l1.append(new Element(3));
 		l1.delete(2);
-		System.out.println(l1.get_position(2).value);
+		System.out.println(l1.get_position(3).value);
 	}
 }
