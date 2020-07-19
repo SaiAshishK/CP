@@ -39,8 +39,21 @@
 // assert(bonusPlayThreeDiceYahtzee(2333555) == (555, 35))
 
 public class BonusPlayThreeDiceYahtzee {
-	public int[] bonusPlayThreeDiceYahtzee(int dice) {
+	public static int[] bonusPlayThreeDiceYahtzee(int dice) {
 		// Your code goes here
+		int[] sp = new int[7];
+		String[] sps = Integer.toString(dice).split("");
+		String rev = "";
+		int p = 0;
+		for(String sps1 : sps){
+			rev = rev + sps1;
+			sp[p++] = Integer.parseInt(sps1);
+		}
+		String abs = rev.substring(0 , 3);
+		
 		return new int[0];
+	}
+	public static void main(String[] args) {
+		System.out.println(bonusPlayThreeDiceYahtzee(2312413));
 	}
 }
