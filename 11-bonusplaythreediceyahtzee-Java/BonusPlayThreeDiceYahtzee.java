@@ -91,7 +91,7 @@ public class BonusPlayThreeDiceYahtzee {
 		int[] res12 = {n1,n2,n3};
 		Arrays.sort(res12);
 		int cd = 0;
-		for(int o = res12.length-1 ; o > 0 ; o--){
+		for(int o = res12.length-1 ; o >= 0 ; o--){
 			cd = cd * 10 + res12[o];
 		}
 		System.out.println(cd);
