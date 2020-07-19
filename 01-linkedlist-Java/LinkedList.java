@@ -34,11 +34,13 @@ public class LinkedList{
 			for(int i = 0 ; i < position-1 ; i++){
 				c = c.next;
 			}
-			return c;
 		}
 		catch(Exception e){
 			return null;
 		}
+			return c;
+		
+		
 	}
 
 	public void insert(Element new_element, int position){
