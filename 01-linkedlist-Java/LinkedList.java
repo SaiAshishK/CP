@@ -33,11 +33,11 @@ public class LinkedList{
 		
 			for(int i = 0 ; i < position-1 ; i++){
 				System.out.println(c.value+"  ");
+				
+				c = c.next;
 				if(c.next == null){
 					return null;
 				}
-				c = c.next;
-				
 			}
 			return c;
 	}
