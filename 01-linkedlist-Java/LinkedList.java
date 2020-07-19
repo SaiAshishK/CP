@@ -33,18 +33,13 @@ public class LinkedList{
 		
 			for(int i = 0 ; i < position-1 ; i++){
 				System.out.println(c.value);
-				try{
-				c = c.next;
-				}
-				catch(Exception e){
+				if(c.next == null){
 					return null;
 				}
+				c = c.next;
+				
 			}
-		
-		
 			return c;
-		
-		
 	}
 
 	public void insert(Element new_element, int position){
