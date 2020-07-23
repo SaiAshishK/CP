@@ -7,6 +7,14 @@
 
 public class numberofpoolballrows {
 	public int fun_numberofpoolballrows(int balls) {
-		return 0;
+		if(balls == 1){return 1;}
+		int count = 0;
+		int i = 1;
+		while(balls >= 1){
+			balls -= i;
+			i++;
+			count++;
+		}
+		return count;
 	}
 }
