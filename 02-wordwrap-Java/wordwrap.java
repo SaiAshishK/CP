@@ -16,7 +16,38 @@
 // # -fgh""")
 
 class wordwrap {
-	public String fun_wordwrap(String s, int n){
-		return "";
+	public static String fun_wordwrap(String s, int n){
+		while(s.charAt(0) == (' ')){
+			s = s.substring(1);
+		}
+		while(s.charAt(s.length()-1) == ' '){
+			s= s.substring(0, s.length()-1);
+		}
+		int p = s.length()/n;
+		String res = "";
+		// for(int j = 0 ; j < s.length() ; j = j+n){
+		int y = 0;
+		int p1 = 0;
+		while(y!=p){
+			res = res + s.substring(p1,p1+n);
+			res = res + "\n";
+			p1 = p1 + n;
+			y++;
+		}
+		if(s.substring(p1).equals("")){
+			res = res.substring(0, res.length()-1);
+		}
+		res = res+s.substring(p1);
+		String[] res1 = res.split("");
+		String res2 = "";
+		for(String p2 : res1){
+			if(p2.equals(" ")){
+				res2 = res2 + "-";
+			}
+			else{
+				res2 = res2 + p2;
+			}
+		}
+		return res2;
 	}
 }
