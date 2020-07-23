@@ -4,8 +4,20 @@
 // diagonally.
 
 public class CanQueenAttack {
-	public boolean canQueenAttack(int x, int y, int a, int b) {
+	public static boolean canQueenAttack(int x, int y, int a, int b) {
 		// Your code goes here
+		if(x == a || y == b){
+			return true;
+		}
+		else{
+			while(x < a || y < b){
+				x++;
+				y++;
+			}
+			if(x == a && y == b){
+				return true;
+			}
+		}
 		return false;
 	}
 }
