@@ -6,7 +6,28 @@
 
 import java.lang.Math; 
 public class carrylessadd {
-	public int fun_carrylessadd(int x, int y) {
-		return 0;
+	public static int fun_carrylessadd(int x, int y) {
+		if(x == 0 || y == 0){
+			if(x == 0){
+				return y;
+			}
+			else{return x;}
+		}
+		int res = 0;
+		int p1 = 1;
+		while(x != 0 || y != 0){
+			int p = x%10;
+			x= x-p;
+			x = x/10;
+
+			int q = y%10;
+			y = y-q;
+			y = y/10;
+			int r = p + q;
+			r = r%10;
+			res = res  + r*p1;
+			p1 *= 10;
+		}
+		return res;
 	}
 }
