@@ -5,7 +5,26 @@
 
 
 class recursions_alternatingsum {
-	public int fun_recursions_alternatingsum(int[] l){
-		return 0;
+	static int res = 0;
+	static int p = 0;
+	static int res1 = 0;
+	static boolean flag = false;
+	public static int fun_recursions_alternatingsum(int[] l){
+		if(l.length == 0){
+			return 0;
+		}
+		if(flag == false){res = res + l[p];flag = true;}
+		else{res = res - l[p];flag = false;}
+		
+		// System.out.println(res);
+		p++;
+		
+		if(p == l.length){res1 = res;res = 0; p = 0; flag = false;return res1;}
+		fun_recursions_alternatingsum(l);
+		return res1;
+
+	}
+	public static void main(String[] args) {
+		System.out.println(fun_recursions_alternatingsum(new int[]{1,2,3,4}));
 	}
 }
