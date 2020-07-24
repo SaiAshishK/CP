@@ -8,6 +8,19 @@
 
 class getaverage {
 	public double fun_getaverage(String s){
-		return 0.0;
+		String[] sp = s.split(",");
+		int p  = 0;
+		int c= 0;
+		for(String q : sp){
+			try{
+				int w = Integer.parseInt(q);
+				p += w;
+				c++;
+			}
+			catch(Exception e){}
+		}
+		if(c == 0){return 0.0;}
+		double res = (double)p/(double)c;
+		return res;
 	}
 }
