@@ -5,6 +5,21 @@
 
 class alternatingsum {
 	public int fun_alternatingsum(int[] s){
-		return 0;
+		if(s.length ==0){
+			return 0;
+		}
+		boolean flag = false;
+		int res = 0;
+		for(int p : s){
+			if(flag == false){
+				flag = true;
+				res = res + p;
+			}
+			else{
+				flag = false;
+				res = res - p;
+			}
+		}
+		return res;
 	}
 }
