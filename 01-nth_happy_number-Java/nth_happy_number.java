@@ -12,8 +12,40 @@
 
 
 class nth_happy_number {
+
+	public static boolean isHappyNumber(int n) {
+		// your code goes here
+		int count = 0;
+		while(count < 10 && n != 1){
+			int p  =0;
+			while(n  > 0){
+				int q = n%10;
+				n = n/10;
+				q = (int)Math.pow(q,2);
+				p+=q;
+
+			}
+			n = p;
+			count++;
+		}
+		if(n == 1){
+			return true;
+		}
+
+		return false;
+	}
+
+
 	public int fun_nth_happy_number(int n){
 		// your code goes here
-		return 0;	
+		int count = -1;
+		int p = 0;
+		while(count!=n){
+			p++;
+			boolean flag = isHappyNumber(p);
+			if(flag){count++;}
+			
+		}
+		return p;	
 	}
 }
