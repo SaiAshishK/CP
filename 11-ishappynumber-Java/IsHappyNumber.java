@@ -13,10 +13,28 @@
 // assert(ishappynumber(98) == False)
 // assert(ishappynumber(404) == True)
 // assert(ishappynumber(405) == False)
+import java.lang.Math;
 
 public class IsHappyNumber {
-	public boolean isHappyNumber(int n) {
+	public static boolean isHappyNumber(int n) {
 		// your code goes here
+		int count = 0;
+		while(count < 10 && n != 1){
+			int p  =0;
+			while(n  > 0){
+				int q = n%10;
+				n = n/10;
+				q = (int)Math.pow(q,2);
+				p+=q;
+
+			}
+			n = p;
+			count++;
+		}
+		if(n == 1){
+			return true;
+		}
+
 		return false;
 	}
 }
