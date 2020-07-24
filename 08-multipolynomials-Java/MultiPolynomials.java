@@ -8,6 +8,12 @@
 public class MultiPolynomials {
 	public int[] multiPolynomials(int[] p1, int[] p2) {
 		// Your code goes here
-		return new int[0];
+		int[] res = new int[p1.length+p2.length-1];
+		for(int i = 0 ; i < p1.length ;i++){
+			for(int j = 0 ; j < p2.length ; j++){
+				res[i+j] += p1[i] * p2[j];
+			}
+		}
+		return res;
 	}
 }
