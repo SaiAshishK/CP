@@ -16,19 +16,19 @@ public class TestJUnit {
    @Test
    public void testCase1() {
         assertEquals(new NthWithProperty309().nthWithProperty309(0), 309);
-        assertEquals(new NthWithProperty309().nthWithProperty309(418), 1);
-        assertEquals(new NthWithProperty309().nthWithProperty309(462), 2);
-        assertEquals(new NthWithProperty309().nthWithProperty309(474), 3);
+        assertEquals(new NthWithProperty309().nthWithProperty309(1), 418);
+        assertEquals(new NthWithProperty309().nthWithProperty309(2), 462);
+        assertEquals(new NthWithProperty309().nthWithProperty309(3), 474);
    }
    @Test
    public void testCase2() {
-        assertEquals(new NthWithProperty309().nthWithProperty309(575), 4);
-        assertEquals(new NthWithProperty309().nthWithProperty309(635), 5);
-        assertEquals(new NthWithProperty309().nthWithProperty309(662), 6);
-        assertEquals(new NthWithProperty309().nthWithProperty309(2014), 100);
+        assertEquals(new NthWithProperty309().nthWithProperty309(4), 575);
+        assertEquals(new NthWithProperty309().nthWithProperty309(5), 635);
+        assertEquals(new NthWithProperty309().nthWithProperty309(6), 662);
+        assertEquals(new NthWithProperty309().nthWithProperty309(100), 2014);
    }
    @Test
    public void testCase3() {
-        assertEquals(new NthWithProperty309().nthWithProperty309(7813), 1000);
+        assertEquals(new NthWithProperty309().nthWithProperty309(1000), 7813);
    }
 }
