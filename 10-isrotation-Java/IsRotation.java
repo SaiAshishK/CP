@@ -17,6 +17,7 @@ public class IsRotation {
 			char c1 = x1.charAt(i);
 			if(c1 == c){
 				p = i;
+				break;
 			}
 		}
 		System.out.println("  p  "+p);
