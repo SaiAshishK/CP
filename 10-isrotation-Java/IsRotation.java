@@ -20,12 +20,13 @@ public class IsRotation {
 			}
 		}
 		String s2 = x1.substring(p, x1.length()) + x1.substring(0, p);
+
 		if(s2.equals(y1) || x1.equals(y1)){
 			return true;
 		}
 		return false;
 	}
 	public static void main(String[] args) {
-		System.out.println(isRotation(12345, 54321));
+		System.out.println(isRotation(12345, 4321));
 	}
 }
