@@ -6,6 +6,33 @@
 
 class nth_additive_prime {
 	public int fun_nth_additive_prime(int n){
-		return 1;
+		int p = 0;
+		int count = -1;
+		while(count != n){
+			p++;
+			if(isPrime(p) && isPrime(additive(p))){
+				count++;
+			}
+		}
+		return p;
 	}
+	public static boolean isPrime(int n) 
+    {
+        if (n <= 1) 
+            return false; 
+   
+        for (int i = 2; i < n; i++) 
+            if (n % i == 0) 
+                return false; 
+  
+        return true; 
+	}
+	public static int additive(int n){
+		int res = 0;
+		String[] s = Integer.toString(n).split("");
+		for(String s1 : s){
+			res = res + Integer.parseInt(s1);
+		}
+		return res;
+	} 
 }
