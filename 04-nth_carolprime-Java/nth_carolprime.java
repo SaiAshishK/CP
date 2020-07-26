@@ -12,6 +12,29 @@
 
 class nth_carolprime {
 	public int fun_nth_carolprime(int n){
-        return 0;
+		int count = -1;
+		int p = 1;
+		while(n!=count){
+			p++;
+			count++;
+			
+		}
+        return carol(p);
+	}
+	public static boolean isPrime(int n) 
+    {
+        if (n <= 1)
+            return false;
+  
+        for (int i = 2; i < n; i++)
+            if (n % i == 0)
+                return false;
+  
+        return true;
+	}
+	public static int carol(int n){
+		int temp1 = ((int)Math.pow(2,n) - 1);
+		int temp2 = ((int)Math.pow(temp1,2) - 2);
+		return temp2;
 	}
 }
