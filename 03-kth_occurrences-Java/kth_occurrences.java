@@ -20,7 +20,22 @@ public class kth_occurrences {
 				hm.put(d, 1);
 			}
 		}
-		
-		return '0';
+		int p  =1;
+		while(p != n){
+			hm.remove(max(hm));
+		}
+		char res = max(hm).charAt(0);
+		return res;
+	}
+	public static String max(HashMap<String,Integer> hm){
+		int p = Integer.MIN_VALUE;
+		String r = "";
+		for(String s : hm.keySet()){
+			if(hm.get(s) > p){
+				p = hm.get(s);
+				r = s;
+			}
+		}
+		return r;
 	}
 }
