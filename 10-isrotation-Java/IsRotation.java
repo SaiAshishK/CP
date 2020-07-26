@@ -22,9 +22,7 @@ public class IsRotation {
 				break;
 			}
 		}
-		// System.out.println("  p  "+p);
 		String s2 = x1.substring(p, x1.length()) + x1.substring(0, p);
-		// System.out.println("-----"+s2);
 		if(s2.equals(y1) || x1.equals(y1)){
 			return true;
 		}
@@ -35,7 +33,6 @@ public class IsRotation {
 		for(int i = s.length()-1 ;i >= 0 ; i--){
 			res = res + s.charAt(i);
 		}
-		System.out.println(res);
 		return res;
 	}
 }
