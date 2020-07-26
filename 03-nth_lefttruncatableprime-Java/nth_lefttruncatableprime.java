@@ -19,7 +19,6 @@ class nth_lefttruncatableprime {
 			if(leftprime(p)){
 
 				count++;
-				System.out.println("-------"+p+"------"+count);
 			}
 		}
 		return p;
@@ -40,25 +39,16 @@ class nth_lefttruncatableprime {
 		if(!isPrime(n)){
 			return false;
 		}
-		String s = Integer.toString(n);
 		while(n > 9){
-			
 			String temp = Integer.toString(n);
 			temp = temp.substring(1);
 			int p = Integer.parseInt(temp);
-			// System.out.println(p);
 			if(!isPrime(p) || temp.substring(0,1).equals("0")){
 				return false;
 			}
-			// n = n/10;
 			n = p;
-			System.out.println("  n  "+n);
 		}
 		return true;
-	}
-	public static void main(String[] args){
-		System.out.println(leftprime(11));
-		System.out.println(fun_nth_lefttruncatableprime(5));
 	}
 }
 
