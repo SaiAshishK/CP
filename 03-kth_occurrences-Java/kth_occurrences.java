@@ -20,8 +20,10 @@ public class kth_occurrences {
 				hm.put(d, 1);
 			}
 		}
-		int p  =1;
+		int p  = 1;
+		System.out.println("1111111");
 		while(p != n){
+			System.out.println("22222222222");
 			hm.remove(max(hm));
 		}
 		char res = max(hm).charAt(0);
