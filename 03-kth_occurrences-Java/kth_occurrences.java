@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 
 public class kth_occurrences {
-	public char fun_kth_occurrences(String s, int n){
+	public static char fun_kth_occurrences(String s, int n){
 		ArrayList<String> ar = new ArrayList<String>();
 		HashMap<String,Integer> hm = new HashMap<String,Integer>();
 		String[] sp = s.split("");
@@ -37,5 +37,8 @@ public class kth_occurrences {
 			}
 		}
 		return r;
+	}
+	public static void main(String[] args) {
+		System.out.println(fun_kth_occurrences("helllo woorld", 2));
 	}
 }
