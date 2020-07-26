@@ -25,6 +25,7 @@ public class kth_occurrences {
 		while(p != n){
 			System.out.println("22222222222");
 			hm.remove(max(hm));
+			p++;
 		}
 		char res = max(hm).charAt(0);
 		return res;
