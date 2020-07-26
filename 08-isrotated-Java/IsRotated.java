@@ -6,17 +6,18 @@
 public class IsRotated {
 	public static boolean isRotated(String str1, String str2) {
 		// Your code goes here
-		String str3 = "";
-		for(int i = str1.length()-1 ;i >=0 ;i--){
-			str3 = str3 + str1.charAt(i);
+		char str3 = str2.charAt(0);
+		int p = 0;
+		for(int i = 0 ; i < str1.length(); i++){
+			char s = str1.charAt(i);
+			if(s == str3){
+				p = i;
+			}
 		}
-		System.out.println(str3);
-		if(str2.equals(str3)){
+		String res = str1.substring(p,str1.length()) + str1.substring(0,p);
+		if(res.equals(str2)){
 			return true;
 		}
 		return false;
-	}
-	public static void main(String[] args) {
-		System.out.println(isRotated("XYZ", "ZYX"));
 	}
 }

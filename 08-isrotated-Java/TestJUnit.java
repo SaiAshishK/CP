@@ -17,7 +17,7 @@ public class TestJUnit {
    @Test
    public void testCase1() {
 		assertEquals(new IsRotated().isRotated("XYZ", "ZXY"), true);
-      assertEquals(new IsRotated().isRotated("12345", "54321"), true);
+      // assertEquals(new IsRotated().isRotated("12345", "54321"), true);
    }
 
    @Test
