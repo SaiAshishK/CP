@@ -26,6 +26,6 @@ public class IsRotation {
 		return false;
 	}
 	public static void main(String[] args) {
-		System.out.println(isRotation(3142, 1234));
+		System.out.println(isRotation(12345, 54321));
 	}
 }
