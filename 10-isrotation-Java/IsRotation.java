@@ -10,7 +10,9 @@ public class IsRotation {
 		// Your code goes here
 		String x1 = Integer.toString(x);
 		String y1 = Integer.toString(y);
-
+		if(x1.equals(rev(y1))){
+			return true;
+		}
 		char c = y1.charAt(0);
 		int p = 0;
 		for(int i = 0 ; i < x1.length() ; i++){
@@ -28,7 +30,11 @@ public class IsRotation {
 		}
 		return false;
 	}
-	public static void main(String[] args) {
-		System.out.println(isRotation(10010, 10100));
+	public static String rev(String s){
+		String res = "";
+		for(int i = s.length()-1 ;i < 0 ; i--){
+			res = res + s.charAt(i);
+		}
+		return res;
 	}
 }
