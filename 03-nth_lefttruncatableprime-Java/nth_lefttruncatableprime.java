@@ -9,8 +9,56 @@
 
 
 class nth_lefttruncatableprime {
-	public int fun_nth_lefttruncatableprime(int n){
-		return 0;
+	public static int fun_nth_lefttruncatableprime(int n){
+		if(n==0){return 2;}
+		int count = 0;
+
+		int p = 2;
+		while(count != n){
+			p++;
+			if(leftprime(p)){
+
+				count++;
+				System.out.println("-------"+p+"------"+count);
+			}
+		}
+		return p;
+	}
+
+	public static boolean isPrime(int n) 
+    {
+        if (n <= 1)
+            return false;
+  
+        for (int i = 2; i < n; i++)
+            if (n % i == 0)
+                return false;
+  
+        return true;
+	} 
+	public static boolean leftprime(int n){
+		if(!isPrime(n)){
+			return false;
+		}
+		String s = Integer.toString(n);
+		while(n > 9){
+			
+			String temp = Integer.toString(n);
+			temp = temp.substring(1);
+			int p = Integer.parseInt(temp);
+			// System.out.println(p);
+			if(!isPrime(p)){
+				return false;
+			}
+			// n = n/10;
+			n = p;
+			System.out.println("  n  "+n);
+		}
+		return true;
+	}
+	public static void main(String[] args){
+		System.out.println(leftprime(11));
+		System.out.println(fun_nth_lefttruncatableprime(5));
 	}
 }
 
