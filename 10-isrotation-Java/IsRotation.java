@@ -32,7 +32,7 @@ public class IsRotation {
 	}
 	public static String rev(String s){
 		String res = "";
-		for(int i = s.length()-1 ;i <= 0 ; i--){
+		for(int i = s.length()-1 ;i >= 0 ; i--){
 			System.out.println(s.charAt(i)+"---------"+i);
 			res = res + s.charAt(i);
 		}
