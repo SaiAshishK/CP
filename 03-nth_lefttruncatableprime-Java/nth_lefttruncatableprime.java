@@ -47,7 +47,7 @@ class nth_lefttruncatableprime {
 			temp = temp.substring(1);
 			int p = Integer.parseInt(temp);
 			// System.out.println(p);
-			if(!isPrime(p)){
+			if(!isPrime(p) || temp.substring(0,1).equals("0")){
 				return false;
 			}
 			// n = n/10;
