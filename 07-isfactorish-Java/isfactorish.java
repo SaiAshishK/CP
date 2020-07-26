@@ -13,6 +13,20 @@
 
 class isfactorish {
 	public boolean fun_isfactorish(int n){
-		return false;
+		if(n<0){n = -n;}
+		String n1 = Integer.toString(n);
+		if(n1.length()!=3){
+			return false;
+		}
+		if(n1.charAt(0) == '0' || n1.charAt(1) == '0' || n1.charAt(2) == '0'){
+			return false;
+		}
+		if(n1.charAt(0) == n1.charAt(1) || n1.charAt(1) == n1.charAt(2) || n1.charAt(0) == n1.charAt(2)){
+			return false;
+		}
+		if((n%Integer.parseInt(String.valueOf(n1.charAt(0))) != 0) || (n%Integer.parseInt(String.valueOf(n1.charAt(1))) != 0) || (n%Integer.parseInt(String.valueOf(n1.charAt(2))) != 0)){
+			return false;
+		}
+		return true;
 	}	
 }
