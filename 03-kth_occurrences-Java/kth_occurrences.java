@@ -21,9 +21,7 @@ public class kth_occurrences {
 			}
 		}
 		int p  = 1;
-		System.out.println("1111111");
 		while(p != n){
-			System.out.println("22222222222");
 			hm.remove(max(hm));
 			p++;
 		}
@@ -40,8 +38,5 @@ public class kth_occurrences {
 			}
 		}
 		return r;
-	}
-	public static void main(String[] args) {
-		System.out.println(fun_kth_occurrences("helllo woorld", 2));
 	}
 }
