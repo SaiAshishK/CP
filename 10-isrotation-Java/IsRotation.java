@@ -6,7 +6,7 @@
 // is a rotation of itself.
 
 public class IsRotation {
-	public boolean isRotation(int x, int y) {
+	public static boolean isRotation(int x, int y) {
 		// Your code goes here
 		String x1 = Integer.toString(x);
 		String y1 = Integer.toString(y);
@@ -24,5 +24,8 @@ public class IsRotation {
 			return true;
 		}
 		return false;
+	}
+	public static void main(String[] args) {
+		System.out.println(isRotation(1234, 3412));
 	}
 }
