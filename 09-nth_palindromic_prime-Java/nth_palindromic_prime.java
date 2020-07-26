@@ -6,15 +6,23 @@
 
 class nth_palindromic_prime {
 	public int fun_nth_palindromic_prime(int n){
-		return 0;
+		int p = 0;
+		int count = -1;
+		while(count != n){
+			p++;
+			if(isPalindrome(p) && isPrime(p)){
+				count++;
+			}
+		}
+		return p;
 	}
-	public static boolean isPalindrome(int s1,int s2){
+	public static boolean isPalindrome(int s1){
 		String s11 = Integer.toString(s1);
 		String res = "";
 		for(int i = s11.length()-1 ;i >= 0 ; i--){
 			res = res + s11.charAt(i);
 		}
-		if(s2 == Integer.parseInt(res)){
+		if(s11.equals(res)){
 			return true;
 		}
 		return false;
