@@ -10,6 +10,7 @@ public class IsRotation {
 		// Your code goes here
 		String x1 = Integer.toString(x);
 		String y1 = Integer.toString(y);
+
 		char c = y1.charAt(0);
 		int p = 0;
 		for(int i = 0 ; i < x1.length() ; i++){
@@ -19,7 +20,7 @@ public class IsRotation {
 			}
 		}
 		String s2 = x1.substring(p, x1.length()) + x1.substring(0, p);
-		if(s2.equals(y1)){
+		if(s2.equals(y1) || x1.equals(y1)){
 			return true;
 		}
 		return false;
