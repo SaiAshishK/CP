@@ -35,6 +35,7 @@ public class IsRotation {
 		for(int i = s.length()-1 ;i < 0 ; i--){
 			res = res + s.charAt(i);
 		}
+		System.out.println(res);
 		return res;
 	}
 }
