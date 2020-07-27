@@ -11,6 +11,26 @@
 
 class nth_tidynumber {
 	public int fun_nth_tidynumber(int n){
-		return 0;
+		int p = 1;
+		int count = 0;
+		while(count != n){
+			p++;
+			if(istidy(p)){
+				count++;
+			}
+		}
+		return p;
+	}
+	public static boolean istidy(int n){
+		if(n < 10){
+			return true;
+		}
+		String[] s = Integer.toString(n).split("");
+		for(int i = 0 ; i < s.length-1; i++){
+			if(Integer.parseInt(s[i]) > Integer.parseInt(s[i+1])){
+				return false;
+			}
+		}
+		return true;
 	}
 }
