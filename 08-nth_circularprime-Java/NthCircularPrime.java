@@ -15,14 +15,7 @@ public class NthCircularPrime {
 		boolean flag = true;
 		while(count != n){
 			p++;
-			if(isPrime(p)){
-				for(int as : combi(p)){
-					if(!isPrime(as)){
-						flag = false;
-					}
-				}
-			}
-			if(flag == true){
+			if(isn(n)){
 				count++;
 			}
 		}
