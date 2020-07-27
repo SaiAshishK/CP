@@ -10,27 +10,32 @@ import java.util.ArrayList;
 public class NthCircularPrime {
 	public static long nthCircularPrime(int n) {
 		// your code goes here
-		int count = -1;
+		int count = 0;
 		long p  =0;
 		while(count != n){
+			// System.out.println("count "+count+" n  "+n);
 			p++;
-			if(isn(n)){
+			// System.out.println("   p   "+p);
+			if(isn((int)p)){
 				count++;
 			}
 		}
+		System.out.println(p);
 		return p;
 	}
 	public static ArrayList<Integer> combi(int n){
 		ArrayList<Integer> ar = new ArrayList<Integer>();
 		ar.add(n);
 		String s = Integer.toString(n);
-		for(int i = 0 ; i < n ; i++){
+		for(int i = 0 ; i < s.length() ; i++){
 			String s1 = s.substring(i,s.length()) + s.substring(0,i);
+			System.out.println("   s1    "+s1);
 			ar.add(Integer.parseInt(s1));
 		}
 		return ar;
 	}
-	public static boolean isPrime(int n) {
+	public static boolean isPrime(int n){
+
 		if(n <=1){
 			return false;
 		}
@@ -42,6 +47,10 @@ public class NthCircularPrime {
 		return true;
 	}
 	public static boolean isn(int n){
+		String s1 = Integer.toString(n);
+		if(s1.length() == 1 && isPrime(n)){
+			return true;
+		}
 		if(!isPrime(n)){
 			return false;
 		}
@@ -53,7 +62,8 @@ public class NthCircularPrime {
 		return true;
 	}
 	public static void main(String[] args) {
-		System.out.println(nthCircularPrime(0));
+		System.out.println(nthCircularPrime(5));
+		// System.out.println(isn(3));
 	}
 
 }
