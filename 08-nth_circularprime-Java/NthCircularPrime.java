@@ -17,6 +17,7 @@ public class NthCircularPrime {
 			p++;
 			// System.out.println("   p   "+p);
 			if(isn((int)p)){
+				// System.out.println(p);;
 				count++;
 			}
 		}
@@ -29,7 +30,6 @@ public class NthCircularPrime {
 		String s = Integer.toString(n);
 		for(int i = 0 ; i < s.length() ; i++){
 			String s1 = s.substring(i,s.length()) + s.substring(0,i);
-			System.out.println("   s1    "+s1);
 			ar.add(Integer.parseInt(s1));
 		}
 		return ar;
@@ -62,7 +62,7 @@ public class NthCircularPrime {
 		return true;
 	}
 	public static void main(String[] args) {
-		System.out.println(nthCircularPrime(5));
+		System.out.println(nthCircularPrime(48));
 		// System.out.println(isn(3));
 	}
 
