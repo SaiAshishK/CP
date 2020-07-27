@@ -16,13 +16,11 @@ public class IsHappyNumber {
 		if(!isPrime(n)){
 			return false;
 		}
-		System.out.println("number "+n);
 		int p = 0;
 		while((n!= 1 && n != 4) && p != 10){
 			n = sumOfSquaresOfDigits(n);
 			p++;
 		}
-		System.out.println("   n   "+n);
 		if(n == 1){
 			return true;
 		}
@@ -35,7 +33,6 @@ public class IsHappyNumber {
 		for(String s1 : s){
 			res = res + (int)Math.pow(Integer.parseInt(s1),2);
 		}
-		System.out.println("         "+res);
 		return res;
 	}
 	public static boolean isPrime(int n) {
@@ -49,9 +46,6 @@ public class IsHappyNumber {
 			
 		}
 		return true;
-	}
-	public static void main(String[] args) {
-		System.out.println(isHappyNumber(940));
 	}
 
 }
