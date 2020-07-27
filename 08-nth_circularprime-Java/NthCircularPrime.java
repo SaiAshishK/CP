@@ -22,6 +22,7 @@ public class NthCircularPrime {
 	}
 	public static ArrayList<Integer> combi(int n){
 		ArrayList<Integer> ar = new ArrayList<Integer>();
+		ar.add(n);
 		String s = Integer.toString(n);
 		for(int i = 0 ; i < n ; i++){
 			String s1 = s.substring(i,s.length()) + s.substring(0,i);
