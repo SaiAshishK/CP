@@ -26,7 +26,7 @@ public class TestJUnit {
 		assertEquals(new IsHappyNumber().isHappyNumber(1418854), false);
 		assertEquals(new IsHappyNumber().isHappyNumber(709), true);
 		assertEquals(new IsHappyNumber().isHappyNumber(6), false);
-		assertEquals(new IsHappyNumber().isHappyNumber(833), true); 
+		assertEquals(new IsHappyNumber().isHappyNumber(833), false); 
    }
 
 }
