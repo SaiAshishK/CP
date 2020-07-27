@@ -17,10 +17,13 @@ public class NthCircularPrime {
 			p++;
 			if(isPrime(p)){
 				for(int as : combi(p)){
-					if(isPrime(as)){
-						count++;
+					if(!isPrime(as)){
+						flag = false;
 					}
 				}
+			}
+			if(flag == true){
+				count++;
 			}
 		}
 		return p;
@@ -43,6 +46,17 @@ public class NthCircularPrime {
 				return false;
 			}
 			
+		}
+		return true;
+	}
+	public static boolean isn(int n){
+		if(!isPrime(n)){
+			return false;
+		}
+		for(int as : combi(n)){
+			if(!isPrime(n)){
+				return false;
+			}
 		}
 		return true;
 	}
