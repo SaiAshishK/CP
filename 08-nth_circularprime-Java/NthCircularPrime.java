@@ -54,7 +54,7 @@ public class NthCircularPrime {
 			return false;
 		}
 		for(int as : combi(n)){
-			if(!isPrime(n)){
+			if(!isPrime(as)){
 				return false;
 			}
 		}
