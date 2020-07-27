@@ -52,7 +52,7 @@ public class NthCircularPrime {
 		return true;
 	}
 	public static void main(String[] args) {
-		System.out.println(0);
+		System.out.println(nthCircularPrime(0));
 	}
 
 }
