@@ -11,8 +11,25 @@
 // functions to make nthHappyNumber(n) easier to write!
 
 public class IsHappyNumber {
-	public boolean isHappyNumber(int n) {
-		// Your code goes here
+	public static boolean isHappyNumber(int n){
+		int p = 0;
+		while(n!= 1 || p != 10){
+			n = sumOfSquaresOfDigits(n);
+			p++;
+		}
+		if(n == 1){
+			return true;
+		}
 		return false;
+
 	}
+	public static int sumOfSquaresOfDigits(int n){
+		String[] s = Integer.toString(n).split("");
+		int res = 0;
+		for(String s1 : s){
+			res = res + (int)Math.pow(Integer.parseInt(s1),2);
+		}
+		return res;
+	}
+
 }
