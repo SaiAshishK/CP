@@ -32,5 +32,8 @@ public class IsHappyNumber {
 		}
 		return res;
 	}
+	public static void main(String[] args) {
+		System.out.println(isHappyNumber(1008));
+	}
 
 }
