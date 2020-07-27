@@ -13,6 +13,9 @@ import java.lang.Math;
 
 public class IsHappyNumber {
 	public static boolean isHappyNumber(int n){
+		if(!isPrime(n)){
+			return false;
+		}
 		System.out.println("number "+n);
 		int p = 0;
 		while((n!= 1 && n != 4) && p != 10){
@@ -34,6 +37,18 @@ public class IsHappyNumber {
 		}
 		System.out.println("         "+res);
 		return res;
+	}
+	public static boolean isPrime(int n) {
+		if(n <=1){
+			return false;
+		}
+		for(int i = 2; i < n;i++){
+			if(n%i == 0){
+				return false;
+			}
+			
+		}
+		return true;
 	}
 	public static void main(String[] args) {
 		System.out.println(isHappyNumber(940));
