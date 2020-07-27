@@ -18,6 +18,7 @@ public class IsHappyNumber {
 			n = sumOfSquaresOfDigits(n);
 			p++;
 		}
+		System.out.println("   n   "+n);
 		if(n == 1){
 			return true;
 		}
