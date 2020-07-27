@@ -12,7 +12,6 @@ public class NthCircularPrime {
 		// your code goes here
 		int count = -1;
 		int p  =0;
-		boolean flag = true;
 		while(count != n){
 			p++;
 			if(isn(n)){
