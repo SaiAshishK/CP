@@ -30,6 +30,7 @@ public class IsHappyNumber {
 		for(String s1 : s){
 			res = res + (int)Math.pow(Integer.parseInt(s1),2);
 		}
+		System.out.println("         "+res);
 		return res;
 	}
 	public static void main(String[] args) {
