@@ -8,10 +8,10 @@ import java.util.ArrayList;
 // note that 197 is prime, as is 971 (rotated left), as is 719 (rotated left again).
 
 public class NthCircularPrime {
-	public long nthCircularPrime(int n) {
+	public static long nthCircularPrime(int n) {
 		// your code goes here
 		int count = -1;
-		int p  =0;
+		long p  =0;
 		while(count != n){
 			p++;
 			if(isn(n)){
@@ -37,7 +37,6 @@ public class NthCircularPrime {
 			if(n%i == 0){
 				return false;
 			}
-			
 		}
 		return true;
 	}
@@ -51,6 +50,9 @@ public class NthCircularPrime {
 			}
 		}
 		return true;
+	}
+	public static void main(String[] args) {
+		System.out.println(0);
 	}
 
 }
