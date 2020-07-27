@@ -14,7 +14,7 @@ import java.lang.Math;
 public class IsHappyNumber {
 	public static boolean isHappyNumber(int n){
 		int p = 0;
-		while((n!= 1 || n != 4) && p != 10){
+		while((n!= 1 && n != 4) && p != 10){
 			n = sumOfSquaresOfDigits(n);
 			p++;
 		}
