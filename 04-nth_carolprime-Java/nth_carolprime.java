@@ -19,6 +19,7 @@ class nth_carolprime {
 			count++;
 			
 		}
+		System.out.println("  count  "+count+"  p "+carol(p));
         return carol(p);
 	}
 	public static boolean isPrime(int n) 
