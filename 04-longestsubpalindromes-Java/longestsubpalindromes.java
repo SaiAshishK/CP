@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-
 // # Write the function longestSubpalindrome(s), that takes a string s and returns 
 // the longest palindrome that occurs as consecutive characters (not just letters, but 
 // 	any characters) in s. So:
@@ -16,13 +15,31 @@ import java.util.Collections;
 class longestsubpalindromes {
 	public static String fun_longestsubpalindromes(String s){
 		ArrayList<String> ar = new ArrayList<String>();
- 		for(int i = 0; i < s.length()/2 -1 ; i++){
-			String in = "" + s.charAt(i);
-			System.out.println("in "+in);
-			
+		for(int i = 0 ; i < s.length() ; i++){
+			for(int j = i+1 ; j <= s.length(); j++){
+				if(isPal(s.substring(i, j))){
+					ar.add(s.substring(i, j));
+				}
+			}
 		}
-		return "";
+		String res = "";
+		int p =0;
+		ArrayList<String> res1 = new ArrayList<String>();
+		for(String s1 : ar){
+			if(s1.length() > p){
+				res = s1;
+				p = s1.length();
+			}
+		}
+		res1.add(res);
+		for(String s2 : ar){
+			if(s2.length() == p){
+				res1.add(s2);
+			}
+		}
+ 		return Collections.max(res1);
 	}
+
 	public static String rev(String s){
 		String r = "";
 		for(int i = s.length()-1 ; i >=0 ; i--){
@@ -30,23 +47,12 @@ class longestsubpalindromes {
 		}
 		return r;
 	}
+
 	public static boolean isPal(String s){
 		if(s.equals(rev(s))){
 			return true;
 		}
 		return false;
 	}
-	public static int search(String s,String p){
-		String[] r = rev(s).split("");
-		for(int i = 0; i < r.length ; i++){
-			if(r[i].equals(p)){
-				return r.length - i -1;
-			}
-		}
-		return -1;
-	}
 
-	public static void main(String[] args) {
-		System.out.println(fun_longestsubpalindromes("abcbce"));
-	}
 }
