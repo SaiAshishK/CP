@@ -10,15 +10,17 @@
 import java.lang.Math; 
 import java.util.Vector; 
 public class nth_smithnumber {
-	public int fun_nth_smithnumber(int n) {
-		if(n == 0){return 2;}
-		int count = 0;
-		int p = 11;
+	public static int fun_nth_smithnumber(int n) {
+		if(n == 0){return 4;}
+		int count = -1;
+		int p = 1;
 		while(count != n){
 			p++;
-			if(isSm(p)){
+			if(!isPrime(p)){
+			if(isSmithNumber(p)){
 				count++;
 			}
+		}
 		}
 		return p;
 	} 
@@ -33,38 +35,47 @@ public class nth_smithnumber {
 		}
 		return true;
 	}
-	public static int sumofd(String s){
-		String[] sp = s.split("");
+	public static int sumofd(int s){
+		String[] sp = Integer.toString(s).split("");
 		int res = 0;
 		for(String s1 : sp){
 			res = res + Integer.parseInt(s1);
 		}
 		return res;
 	}
-	public static boolean isSm(int n){
-		String s1 = Integer.toString(n);
-		int sofd = sumofd(s1);
-		if(sumfactor(n) == sofd){
+
+	public static boolean isSmithNumber(int n){
+		String str = "";
+		// int sum = 0;
+		int i = 2;
+		int p = n;
+		int temp = (n / 2 ) + 1;
+		while(n != 0 && i < temp){
+			if(n % i == 0){
+				// System.out.println("n = " + n);
+				str = str + i;
+				// sum = sum + i;
+				n = n / i;
+			}
+			else{
+				i = i + 1;
+				while(isPrime(i) == false){
+					i = i + 1;
+				}
+			}
+			
+		}
+		// System.out.println("str = " + str);
+		str = str.trim();
+		int new1 = Integer.parseInt(str);
+
+		if(sumofd(p) == sumofd(new1)){
 			return true;
 		}
-		return false;
-	}
-	public static int sumfactor(int n){
-		int s = 0;
-		int i  = 2;
-		while(n > 1 && !isPrime(n)){
-			if(n%i == 0){
-				System.out.println("----"+i);
-				s = s + sumfactor(i);
-				n = n/i;
-			}
-			i++;
-			System.out.println(n);
+		else{
+			return false;
 		}
-		return s+sumofd(Integer.toString(n));
-	}
-	public static void main(String[] args) {
-		System.out.println(isSm(3));
+
 	}
 	
 }
