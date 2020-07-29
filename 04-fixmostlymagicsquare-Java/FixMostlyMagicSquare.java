@@ -12,6 +12,7 @@
 // [ [ 1, 2],
 //   [ 2, 1]]
 // Each row and each column add to 3, but one diagonal adds to 2 and the other to 4.
+import java.nio.MappedByteBuffer;
 import java.util.*;
 
 public class FixMostlyMagicSquare {
@@ -22,38 +23,78 @@ public class FixMostlyMagicSquare {
 		}
 		return res;
 	}
-
+	public int getr(int[][] a,int c){
+		for(int i = 0 ; i < a.length ; i++){
+			if(sum(a[i]) != c){
+				return i;
+			}
+		}
+		return -1;
+	}
+	public int getc(int[][] a,int c){
+		for(int i = 0 ;i < a.length ; i++){
+			int r = 0;
+			for(int j = 0 ; j < a.length ;j ++){
+				r = r + a[j][i];
+			}
+			if(r != c){
+				return i;
+			}
+		}
+		return -1;
+	}
 	public int[][] fixMostlyMagicSquare(int[][] a) {
 		// Your code goes here
-		System.out.println(Arrays.toString(a[0]));
-		boolean flag = false;
-		int s = sum(a[0]);
-		if(sum(a[0])!=sum(a[1])){
-			s= sum(a[2]);
+		ArrayList<Integer> ar = new ArrayList<Integer>();
+		HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
+		for(int i = 0 ; i < a.length ; i++){
+			int c = sum(a[i]);
+			if(ar.contains(c)){
+				hm.replace(c, hm.get(c)+1);
+			}else{
+				ar.add(c);
+				hm.put(c, 1);
+			}
 		}
-		int count = 0;
-		for(int i = 0 ; i < a.length;i++){
-			if(!(s == sum(a[i]))){
-				System.out.println("s "+s+"  "+sum(a[i]));
-				flag = true;
-				break;
+		int p = Integer.MIN_VALUE;
+		int res = 0;
+		for(Map.Entry<Integer,Integer> e : hm.entrySet()){
+			if(e.getValue() > p){
+				p = e.getValue();
+				res = e.getKey();
+			}
+		}
+		int row = getr(a,res);
+		ar.clear();
+		hm.clear();
+		for(int j = 0; j < a.length ;j++){
+			int q = 0;
+			for(int k = 0 ; k < a.length ; k++){
+				q = q + a[k][j];
+			}
+			if(ar.contains(q)){
+				hm.replace(q, hm.get(q)+1);
 			}
 			else{
-				System.out.println("lkj");
-				count++;
+				ar.add(q);
+				hm.put(q, 1);
 			}
-			
 		}
-		System.out.println(flag);
-		if(flag == false){
+		int p1 = Integer.MIN_VALUE;
+		int res1 = 0;
+		for(Map.Entry<Integer,Integer> e1 : hm.entrySet()){
+			if(e1.getValue() > p1){
+				p1 = e1.getValue();
+				res1 = e1.getKey();
+			}
+		}
+		int col = getc(a,res1);
+		if(col == -1 || row == -1){
 			return a;
 		}
-		boolean flag1 = 0;
-		int s2 = 0;
-		for(int j = 0 ; j < a[0].length ; j++){
-			
-		}
-		System.out.println(count);
-		return new int[0][0];
+		int y = sum(a[row]);
+		a[row][col ] += res1 - y;
+
+		return a;
 	}
 }
