@@ -1,13 +1,33 @@
 class BinarySearch {
-	public int binary_search(int[] arr, int value){
+        static int lo = 0;
+        static int hi = 0;
+	static int mid = 0;
+	static int count = 0;
+        public int binary_search(int[] arr, int value){
         // Your code goes here
-        int count = 0;
-        for(int i = 0 ; i < arr.length ; i++){
-                if(arr[i] == value){
-                        return count;
+                if(count == 0){
+                        hi = arr.length-1;
+                        count++;
                 }
-                count++;
+                mid = (hi + lo)/2;
+                if(lo == hi  && arr[mid] != value){
+                        return -1;
+                }
+                if(arr[mid] == value){
+                        hi = 0;
+                        int mid1 = mid;
+                        mid = 0;
+                        count = 0;
+                        lo = 0;
+                        return mid1;
+                }
+                else if(arr[mid] < value){
+                        lo = mid + 1;
+                        return binary_search(arr, value);
+                }
+                else{
+                        hi = mid -1;
+                        return binary_search(arr, value);
+                }
         }
-        return -1;
-	}
 }
