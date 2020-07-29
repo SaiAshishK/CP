@@ -11,22 +11,13 @@ import java.lang.Math.*;
 
 class rectangle_overlap {
 	public boolean fun_rectangle_overlap(int left1, int top1, int width1, int height1, int left2, int top2, int width2, int height2){
-		int[] l1 = {top1,left1};
-		int[] r1 = {width1,height1};
-		int[] l2 = {top2,left2};
-		int[] r2 = {width2,height2};
-		if (left1 < width2 && width1 > left2 && top1 > height2 && height1 < top2 ){
+		int[] l1 = {left1,top1};
+		int[] r1 = {left1 + width1,top1 + height1};
+		int[] l2 = {left2,top2};
+		int[] r2 = {left2 + width2,top2 + height2};
+		if((l2[0] >= left1-width2) && (l2[0] <= r1[0]) && (l2[1] >= l1[1]-height2) && (l2[1] <= l1[1] + height1)){
 			return true;
 		}
-		if (l1[0] >= r2[0] || l2[0] >= r1[0]) { 
-            return false; 
-        } 
-  
-        // If one rectangle is above other  
-        if (l1[1] <= r2[1] || l2[1] <= r1[1]) { 
-            return false; 
-        } 
-  
-        return true;
+        return false;
 	}
 }
