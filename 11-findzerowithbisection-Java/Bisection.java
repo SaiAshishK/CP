@@ -7,6 +7,25 @@
 public class Bisection {
 	public double bisection(int x, double epsilon, double step) {
 		// your code goes here
-		return 0.1;
+		double hi= (double)x;
+		double lo = 0.0;
+		double middle=(hi+lo)/2;
+		while (Math.abs(Math.pow(middle,2)-x) >= epsilon){
+			if(Math.pow(middle,2) >x){
+				hi=middle;
+			}
+			else if(Math.pow(middle,2) < x){
+				lo=middle;
+			}
+			else{
+				break;
+			}
+			middle=(lo+hi)/2;
+		
+			
 	}
+	return middle;
+	// return 0.1;
+}
+
 }
