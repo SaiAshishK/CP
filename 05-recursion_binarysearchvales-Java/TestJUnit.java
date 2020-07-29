@@ -29,3 +29,4 @@ public class TestJUnit {
       assertEquals(new BinarySearchValues().binarySearchValues(new char[]{'a', 'c', 'f', 'g', 'm', 'q'}, 'b'), "[(2, f), (0, a), (1, c)]");
    }
 }
+

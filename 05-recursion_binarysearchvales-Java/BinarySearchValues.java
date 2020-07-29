@@ -18,8 +18,38 @@
 // Hint: Do not slice the list L, but rather adjust the indexes into L. 
 
 public class BinarySearchValues {
-	public String binarySearchValues(char[] list, char search) {
+	static int lo = 0;
+	static int hi = 0;
+	static String res = "[";
+	static int mid = 0;
+	static int count = 0;
+	public static String binarySearchValues(char[] list, char search) {
 		// Your code goes here
-		return "";
+		if(count == 0){
+			hi = list.length-1;
+			count++;
+		}
+		mid = (hi + lo)/2;
+		res = res +"("+ mid + ", " + list[mid] + ")";
+		if(list[mid] == search || lo == hi){
+			res = res + "]";
+			String s1 = res;
+			res = "[";
+			hi = 0;
+			mid = 0;
+			count = 0;
+			lo = 0;
+			return s1;
+		}
+		else if(list[mid] < search){
+			res = res +", ";
+			lo = mid+1;
+			return binarySearchValues(list, search);
+		}
+		else{
+			res = res +", ";
+			hi = mid-1;
+			return binarySearchValues(list, search);
+		}
 	}
 }
