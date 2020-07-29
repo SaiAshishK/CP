@@ -12,10 +12,25 @@
 // assert(recursion_secondlargest([ ]) == None)
 // Again, you do not need to sort the list. We didn't sort it in our sample solution. We just tracked the two largest 
 // values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
-
+import java.util.Arrays;
 public class SecondLargest {
-	public Integer secondLargest(int[] list) {
+	static int x = 1;
+	public static Integer secondLargest(int[] list) {
 		// Your code goes here
-		return null;
+		if(list.length <= 1){
+			return null;
+		}
+		if(x == 2){
+			x = 1;
+			// System.out.println(list.length-x-1);
+			return list[list.length-x-1];
+		}
+		Arrays.sort(list);
+		x++;
+		return secondLargest(list);
+
+	}
+	public static void main(String[] args) {
+		System.out.println(secondLargest(new int[]{1,2,3,4,5}));
 	}
 }
