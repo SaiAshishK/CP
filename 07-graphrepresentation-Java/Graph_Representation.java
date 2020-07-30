@@ -62,7 +62,11 @@ public class Graph_Representation{
 		// """Don't return a list of edge objects!
         // Return a list of list that looks like this:
         // [Edge Value, From Node Value, To Node Value]"""
-        ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
+		for(Edge e : edges){
+			ArrayList<Integer> c = new ArrayList<Integer>(Arrays.asList(e.value,e.node_from.value,e.node_to.value));
+			r.add(c);
+		}
         return r;
 	}
 
@@ -73,6 +77,23 @@ public class Graph_Representation{
         // "from" nodes.
         // Each section in the list will store a list of To Node
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
+		
+		int max = 0;
+
+		for(Node n : nodes){
+			if(n.value > max){
+				max = n.value;
+			}
+		}
+		for(int i = 0; i <= max ; i++){
+			ArrayList<Integer> c = new ArrayList<Integer>();
+			for(Edge e : edges){
+				if(i == e.node_from.value){
+					c.add(e.node_to.value);
+				}
+			}
+			r.add(c);
+		}
 		return r;
 
 	}
@@ -85,6 +106,26 @@ public class Graph_Representation{
         // and a 0 if no edge exists."""
 		
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
+		int max = 0;
+
+		for(Node n : nodes){
+			if(n.value > max){
+				max = n.value;
+			}
+		}
+
+		for(int i = 0; i <= max ; i++){
+			ArrayList<Integer> c = new ArrayList<Integer>();
+			for(int j  =0 ; j <= max ;j++){
+				c.add(0);
+			}
+			r.add(c);
+		}
+		
+		for(Edge e : edges){
+			ArrayList<Integer> c1 = r.get(e.node_from.value);
+			c1.set(e.node_to.value,e.value);
+		}
 		return r;
 
 
